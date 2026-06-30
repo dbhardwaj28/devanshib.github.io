@@ -31,17 +31,18 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h1 { color: #1A202C; margin: 0 0 5px 0; font-size: 2.5rem; }
-        .subtitle { color: #4A5568; font-size: 1.2rem; font-weight: 500; margin-bottom: 15px; }
-        .links-container { display: flex; gap: 15px; }
+        .subtitle { color: #4A5568; font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
+        .contact-info { color: #718096; font-size: 0.95rem; margin-bottom: 15px; }
+        .links-container { display: flex; gap: 12px; flex-wrap: wrap; }
         .btn-link {
             display: inline-flex;
             align-items: center;
             background: #2B6CB0;
             color: white;
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 6px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             transition: background 0.2s;
         }
@@ -52,7 +53,6 @@
         h2 { color: #2B6CB0; margin-top: 40px; font-size: 1.5rem; border-left: 4px solid #2B6CB0; padding-left: 10px; padding-top: 5px; }
         p { margin-bottom: 15px; text-align: justify; }
         
-        /* SKILLS GRID STYLING */
         .skills-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); 
@@ -92,14 +92,13 @@
             left: 0; 
         }
         
-        /* TIMELINE / WORK CARD STYLING */
         .exp-card {
             background: #ffffff;
             border: 1px solid #E2E8F0;
-            padding: 25px;
+            padding: 22px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
         .exp-header {
             display: flex;
@@ -109,19 +108,19 @@
         }
         .exp-header h3 { margin: 0; color: #1A202C; font-size: 1.25rem; }
         .exp-company { color: #4A5568; font-weight: 600; font-size: 1.05rem; }
-        .exp-time { color: #718096; font-size: 0.95rem; font-weight: 500; white-space: nowrap; }
+        .exp-time { color: #718096; font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
         .exp-bullets { padding-left: 20px; margin-top: 10px; }
-        .exp-bullets li { margin-bottom: 8px; text-align: justify; }
+        .exp-bullets li { margin-bottom: 6px; text-align: justify; font-size: 0.95rem; }
 
-        .tags { margin-top: 15px; }
+        .tags { margin-top: 12px; }
         .tag {
             background: #EBF8FF;
             color: #2B6CB0;
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-right: 8px;
+            margin-right: 6px;
             display: inline-block;
         }
         footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid #E2E8F0; text-align: center; font-size: 0.9rem; color: #718096; }
@@ -133,88 +132,94 @@
         <img src="profile.png" alt="Dr. Devanshi Bhardwaj" class="profile-img" onerror="this.style.display='none'">
         <div class="header-text">
             <h1>Dr. Devanshi Bhardwaj</h1>
-            <div class="subtitle">Process Engineer | Materials Scientist | Independent Technical Consultant</div>
+            <div class="subtitle">Process Engineer | Materials Scientist | Technical Consultant</div>
+            <div class="contact-info">Union City, CA | devanshibhardwaj28@gmail.com</div>
             <div class="links-container">
-                <!-- Remember to paste your actual profile links back inside the hrefs below -->
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="btn-link">LinkedIn Profile</a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="btn-link">LinkedIn</a>
                 <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="btn-link btn-secondary">Google Scholar</a>
+                <a href="https://www.researchgate.net/" target="_blank" class="btn-link btn-secondary">ResearchGate</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- PROFILE -->
+        <!-- PROFILE EXECUTIVE SUMMARY -->
         <section>
             <h2>Professional Profile</h2>
             <p>
-                Materials Scientist and Process Engineer specializing in thin-film fabrication, complex material synthesis, and advanced characterization frameworks. Proven expertise in optimizing semiconductor deposition hardware environments, managing chemical protocol safety workflows, and scaling production-oriented engineering models. Adept at translating discovery-phase research paradigms into high-yield, stable industrial manufacturing processes.
-            </p>
-            <p>
-                Currently operating as an Independent Technical Consultant, partnering with semiconductor, ceramic, and advanced electronics hardware industries to diagnose thin-film structural profiles, troubleshoot manufacturing deviations, and deliver rigorous materials characterization analytics.
+                Results-driven Materials Scientist and Process Engineer with a Ph.D. in Chemistry and extensive expertise in thin-film deposition, advanced structural characterization, and ultra-high vacuum (UHV) systems. Demonstrated success in executing high-stakes research milestones for multi-million dollar ARPA-E energy projects, engineering advanced ceramic coatings, and designing custom laboratory instrumentation. Adept at troubleshooting complex vacuum hardware, implementing Design of Experiments (DoE), and collaborating across multidisciplinary boundaries to translate fundamental materials science into robust, reproducible technical processes.
             </p>
         </section>
 
-        <!-- TECHNICAL SKILLS -->
+        <!-- TECHNICAL SKILLS SECTIONS -->
         <section>
-            <h2>Technical Skills & Engineering Toolkit</h2>
+            <h2>Skills & Technical Expertise</h2>
             <div class="skills-grid">
                 
                 <div class="skills-category">
-                    <h3>Thin-Film & Semiconductor Fabrication</h3>
+                    <h3>Thin-Film Deposition & Processing</h3>
                     <ul class="skills-list">
-                        <li><strong>Vacuum Deposition Systems:</strong> Sputtering, Evaporation, Chemical Vapor Deposition (CVD) environments</li>
-                        <li><strong>Hardware Tooling:</strong> High-vacuum chamber configurations, gas delivery manifolds, target profiling</li>
-                        <li><strong>Material Systems:</strong> Synthesis of complex oxides, thin films, phase-change materials (Vanadium Dioxide)</li>
+                        <li>Pulsed Laser Deposition (PLD), Spark Plasma Sintering (SPS)</li>
+                        <li>Magnetron Sputtering (including DC Reactive Sputtering)</li>
+                        <li>Chemical Vapor Deposition (CVD), Hot-Press Synthesis</li>
+                        <li>Ultrasonic Nebulized Spray Pyrolysis (UNSPACM)</li>
                     </ul>
                 </div>
 
                 <div class="skills-category">
-                    <h3>Advanced Materials Characterization</h3>
+                    <h3>Advanced Structural & Chemical Characterization</h3>
                     <ul class="skills-list">
-                        <li><strong>Structural Profiling:</strong> X-ray Diffraction (XRD), thin-film phase identification, orientation evaluation</li>
-                        <li><strong>Microscopy & Surface:</strong> Scanning Electron Microscopy (SEM), surface roughness profiling, interface stability analysis</li>
-                        <li><strong>Data Interpretation:</strong> Mapping structural boundaries, composition analytics, and material deformation curves</li>
+                        <li>X-ray Diffraction (XRD), X-ray Reflectivity (XRR)</li>
+                        <li>Scanning (SEM) and Transmission (TEM) Electron Microscopy</li>
+                        <li>X-ray Photoelectron Spectroscopy (XPS), Atomic Force Microscopy (AFM)</li>
+                        <li>Laser Flash Analysis (LFA), Dilatometry, UV-Vis/Infra-red Spectroscopy</li>
                     </ul>
                 </div>
 
                 <div class="skills-category">
-                    <h3>Process Control & Engineering Methodologies</h3>
+                    <h3>Vacuum & Systems Engineering</h3>
                     <ul class="skills-list">
-                        <li><strong>Process Optimization:</strong> Parameter isolation, drift reduction, deposition uniformity stabilization</li>
-                        <li><strong>Statistical Tooling:</strong> Design of Experiments (DOE) framework planning, Statistical Process Control (SPC) concepts</li>
-                        <li><strong>Problem Solving:</strong> Failure-mode mechanics exploration, systematic root-cause analysis on structural deviations</li>
+                        <li>Extensive expertise in ultra-high vacuum (UHV) configurations</li>
+                        <li>Technical system calibration and engineering of custom lab apparatus</li>
+                        <li>Complex vacuum hardware maintenance and isolation of chamber leak rates</li>
                     </ul>
                 </div>
 
                 <div class="skills-category">
-                    <h3>Laboratory Operations & Compliance</h3>
+                    <h3>Data Analytics & Optimization</h3>
                     <ul class="skills-list">
-                        <li><strong>EHS & Safety Leadership:</strong> Hazardous chemical protocol oversight, storage configurations, waste streams routing</li>
-                        <li><strong>Operational Safety:</strong> Laboratory hazard assessments, chemical standard operating procedures (SOPs) development</li>
-                        <li><strong>Vendor & Tool Tracking:</strong> Equipment utilization monitoring, preventive safety workflows documentation</li>
+                        <li>Statistical process tuning via Taguchi-based Design of Experiments (DoE)</li>
+                        <li>Proficient in Minitab, Origin, ImageJ, XPSPeak41</li>
+                        <li>Advanced characterization analysis using GSAS and X'Pert Highscore Plus</li>
                     </ul>
                 </div>
 
             </div>
         </section>
 
-        <!-- WORK EXPERIENCE -->
+        <!-- PROFESSIONAL EXPERIENCE -->
         <section>
             <h2>Professional Experience</h2>
 
             <div class="exp-card">
                 <div class="exp-header">
                     <div>
-                        <h3>Independent Technical Consultant</h3>
-                        <div class="exp-company">Semiconductor & Advanced Ceramic Engineering Industries</div>
+                        <h3>Materials & Process Engineering Consultant</h3>
+                        <div class="exp-company">Freelance / Technical Advisory</div>
                     </div>
                     <div class="exp-time">March 2025 – Present</div>
                 </div>
+                <p style="font-style: italic; color:#4A5568; font-size:0.95rem; margin-bottom:8px;">Union City, CA</p>
                 <ul class="exp-bullets">
-                    <li>Provide specialized technical consulting on thin-film processing stability, materials optimization, and advanced structural profiling analytics.</li>
-                    <li>Partner with engineering teams to isolate material failure modes, map structural boundary deviations, and evaluate thin-film cross-sections.</li>
-                    <li>Deliver data-driven material characterization summaries to bridge production lines with rigorous scientific analytical benchmarks.</li>
+                    <li>Deliver advanced process optimization, thin-film tuning, and material characterization analysis for semiconductor and advanced composite hardware clients.</li>
+                    <li>Optimize PVD/CVD thin-film deposition windows and processing parameters to maximize film morphology and thickness uniformity.</li>
+                    <li>Utilize advanced structural and microstructural analysis via SPS, XRD, and SEM to systematically resolve client engineering bottlenecks.</li>
                 </ul>
+                <div class="tags">
+                    <span class="tag">Process Tuning</span>
+                    <span class="tag">Thin Films</span>
+                    <span class="tag">Client Diagnostics</span>
+                </div>
             </div>
 
             <div class="exp-card">
@@ -223,55 +228,159 @@
                         <h3>Postdoctoral Research Associate</h3>
                         <div class="exp-company">Stony Brook University</div>
                     </div>
-                    <div class="exp-time">March 2022 – February 2025</div>
+                    <div class="exp-time">Sept 2021 – Feb 2025</div>
                 </div>
+                <p style="font-style: italic; color:#4A5568; font-size:0.95rem; margin-bottom:8px;">Stony Brook, NY</p>
                 <ul class="exp-bullets">
-                    <li>Conducted critical engineering assessments on materials for fusion applications as part of the Department of Energy ARPA-E GAMOW program.</li>
-                    <li>Investigated the high-temperature mechanics, long-term phase stability, and thermal degradation pathways of zirconium and yttrium hydrides under severe environmental operational boundaries.</li>
-                    <li>Served as **Lab Safety Manager** for two years; oversaw full chemical inventory governance, drafted hazardous standard operating procedures (SOPs), and optimized environmental health and safety (EHS) waste stream configurations.</li>
+                    <li>Executed core research milestones for a high-profile, multi-million dollar ARPA-E (MIITNER) project focused on advanced materials for nuclear and fusion energy applications.</li>
+                    <li>Pioneered the synthesis, dense optimization (100%), and structural stabilization of novel Be-based two-phase moderators and beryllides utilizing advanced Spark Plasma Sintering (SPS) and Hot-Press workflows.</li>
+                    <li>Authorized to safely handle, process, and characterize highly toxic Beryllium and Beryllium-containing matrices under rigorous federal and institutional safety protocols.</li>
+                    <li>Managed, calibrated, and performed routine leak-testing and hardware troubleshooting for ultra-high vacuum (UHV) systems, maintaining base pressures down to 10⁻⁸ Torr to eliminate target contamination.</li>
+                    <li>Evaluated phase purity, microstructural stability, and high-temperature thermal/physical properties using Laser Flash Analysis (LFA), dilatometry, and X-ray diffraction (XRD).</li>
+                    <li>Monitored cleanroom equipment safety queues and onboarded/mentored multiple Ph.D. candidates in structural analysis protocols and compliance.</li>
                 </ul>
                 <div class="tags">
-                    <span class="tag">ARPA-E GAMOW</span>
-                    <span class="tag">Ceramic Engineering</span>
-                    <span class="tag">Safety Leadership</span>
+                    <span class="tag">ARPA-E MIITNER</span>
+                    <span class="tag">Beryllides</span>
+                    <span class="tag">SPS</span>
+                    <span class="tag">UHV Systems (10⁻⁸ Torr)</span>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Research Associate</h3>
+                        <div class="exp-company">Indian Institute of Science (IISc)</div>
+                    </div>
+                    <div class="exp-time">Sept 2020 – May 2021</div>
+                </div>
+                <p style="font-style: italic; color:#4A5568; font-size:0.95rem; margin-bottom:8px;">Bengaluru, India</p>
+                <ul class="exp-bullets">
+                    <li>Demonstrated the precise gas-sensing properties of porous, phase-pure V₇O₁₆ thin films synthesized via Pulsed Laser Deposition (PLD).</li>
+                    <li>Spearheaded operational planning, scheduling, and preventative troubleshooting for department-wide vacuum and characterization suites (XRD, SEM, XPS), managing a high-volume queue of 25+ samples per week.</li>
+                    <li>Trained incoming graduate researchers on custom data acquisition workflows and experimental apparatus operations.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Pulsed Laser Deposition</span>
+                    <span class="tag">Equipment Ownership</span>
+                    <span class="tag">Vanadium Oxides</span>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Senior Research Fellow</h3>
+                        <div class="exp-company">Indian Institute of Science (IISc)</div>
+                    </div>
+                    <div class="exp-time">Aug 2017 – Aug 2020</div>
+                </div>
+                <p style="font-style: italic; color:#4A5568; font-size:0.95rem; margin-bottom:8px;">Bengaluru, India</p>
+                <ul class="exp-bullets">
+                    <li>Synthesized high-quality, large-area vanadium dioxide (VO₂) thin films using PLD and DC Reactive Sputtering, achieving precise phase purity and an optimized surface roughness of 3.68 nm.</li>
+                    <li>Implemented Design of Experiments (DoE) utilizing the Taguchi model to systematically optimize deposition parameters, significantly improving thin-film uniformity and deposition reproducibility.</li>
+                    <li>Co-designed, built, and calibrated a custom ultrasonic nebulized spray pyrolysis (UNSPACM) experimental apparatus, demonstrating hands-on mechanical troubleshooting and system engineering capabilities.</li>
+                    <li>Partnered with international institutions (including Institut Pprime, France, and Cinvestav-Merida, Mexico) to characterize and map the thermophysical and optoelectronic properties of thin films and bulk materials for aerospace applications.</li>
+                    <li>Diagnosed and resolved complex hardware faults in thin-film deposition chambers and vacuum subsystems, reducing equipment downtime and optimizing instrument uptime for multi-user facilities.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">DC Reactive Sputtering</span>
+                    <span class="tag">Taguchi DoE</span>
+                    <span class="tag">Custom Instrumentation</span>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Junior Research Fellow & Lab Safety Coordinator</h3>
+                        <div class="exp-company">Indian Institute of Science (IISc)</div>
+                    </div>
+                    <div class="exp-time">July 2015 – July 2017</div>
+                </div>
+                <p style="font-style: italic; color:#4A5568; font-size:0.95rem; margin-bottom:8px;">Bengaluru, India</p>
+                <ul class="exp-bullets">
+                    <li>Introduced Scandium (Sc) doping to tune the optical properties of VO₂ thin films, successfully expanding the bandgap from 1.76 eV to 2.02 eV to improve visible spectrum transparency for thermochromic applications.</li>
+                    <li>Fabricated large-area, uniform Sc-doped VO₂ thin films using a home-built spray pyrolysis setup, optimizing parameters for scalable optoelectronic applications.</li>
+                    <li>Served as the dedicated Lab Safety Coordinator, enforcing strict compliance with chemical handling, toxic material waste disposal, and high-temperature equipment protocols.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Bandgap Engineering</span>
+                    <span class="tag">Lab Safety Leadership</span>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Junior Research Fellow</h3>
+                        <div class="exp-company">Institute of Nanoscience and Technology (INST)</div>
+                    </div>
+                    <div class="exp-time">Aug 2014 – June 2015</div>
+                </div>
+                <p style="font-style: italic; color:#4A5568; font-size:0.95rem; margin-bottom:8px;">Mohali, India</p>
+                <ul class="exp-bullets">
+                    <li>Developed a cost-effective, reverse micellar and ionic salt flux synthesis route to engineer morphologically controlled zinc oxide (ZnO) nanostructures optimized for energy generation and storage applications.</li>
+                    <li>Functioned as an independent expert user and characterization lead for key analytical systems, including X-ray Diffraction (XRD), Scanning Electron Microscopy (SEM), and Transmission Electron Microscopy (TEM).</li>
+                    <li>Co-organized the international NanoBio 2014 conference, managing logistics and programming for 80+ participants and 16+ international speakers to facilitate interdisciplinary collaboration across INST, AIIMS, and the University of Cincinnati.</li>
+                    <li>Served as the Lab Safety and Chemical Inventory Coordinator, managing compliance, auditing hazardous materials, and maintaining chemical logs across shared facilities.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">ZnO Nanostructures</span>
+                    <span class="tag">Conference Logistics</span>
                 </div>
             </div>
         </section>
 
         <!-- EDUCATION -->
         <section>
-            <h2>Education & Credentials</h2>
+            <h2>Education</h2>
 
             <div class="exp-card">
                 <div class="exp-header">
                     <div>
-                        <h3>Ph.D. in Chemistry (Materials Science Specialization)</h3>
-                        <div class="exp-company">Indian Institute of Science (IISc)</div>
+                        <h3>Indian Institute of Science (IISc)</h3>
+                        <div class="exp-company">Ph.D. in Materials Science</div>
                     </div>
-                    <div class="exp-time">Graduated</div>
+                    <div class="exp-time">July 2015 – Dec 2020</div>
                 </div>
                 <p style="margin-top: 10px; margin-bottom: 0;">
-                    Focused deeply on advanced material synthesis, crystal structural mechanics, and thin-film execution. Developed deep competencies in high-vacuum physics configurations and structural boundary mapping metrics.
+                    <strong>Thesis:</strong> <em>Vanadium dioxide: Bulk and Thin Films for Device Applications</em><br>
+                    Advanced training in solid-state synthesis, structural symmetry transitions, and ultra-high vacuum hardware operations. Coursework completed with a focus on core material mechanics.
                 </p>
             </div>
 
             <div class="exp-card">
                 <div class="exp-header">
                     <div>
-                        <h3>Bachelor of Science (B.Sc.) in Chemistry</h3>
-                        <div class="exp-company">University of Delhi</div>
+                        <h3>Hansraj College, University of Delhi</h3>
+                        <div class="exp-company">Master of Science (M.Sc.) in Chemistry</div>
                     </div>
-                    <div class="exp-time">Graduated</div>
+                    <div class="exp-time">July 2012 – June 2014</div>
                 </div>
                 <p style="margin-top: 10px; margin-bottom: 0;">
-                    Foundational academic curriculum in chemistry protocols, structural analysis, and quantitative material laboratory methodologies.
+                    Specialization in Inorganic Chemistry. Graduated with first-class honors (73.5%). Focused on analytical characterization methodologies and advanced coordination matrices.
+                </p>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Hansraj College, University of Delhi</h3>
+                        <div class="exp-company">Bachelor of Science (B.Sc. Hons.) in Chemistry</div>
+                    </div>
+                    <div class="exp-time">July 2009 – June 2012</div>
+                </div>
+                <p style="margin-top: 10px; margin-bottom: 0;">
+                    Graduated with distinction (82.0%). Robust core foundation spanning physical chemistry, quantum kinetics, thermodynamics, and quantitative laboratory operations.
                 </p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Dr. Devanshi Bhardwaj | Process Engineering & Materials Portfolio</p>
+        <p>© 2026 Dr. Devanshi Bhardwaj | Built and Hosted via GitHub Pages</p>
     </footer>
 
 </body>
