@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Dr. Devanshi Bhardwaj</title>
+    <style>
+        :root { --bg-color: #F7FAFC; --card-bg: #ffffff; --text-color: #2D3748; --heading-color: #1A202C; --accent-color: #2B6CB0; --border-color: #E2E8F0; }
+        [data-theme="dark"] { --bg-color: #1A202C; --card-bg: #2D3748; --text-color: #E2E8F0; --heading-color: #F7FAFC; --accent-color: #63B3ED; --border-color: #4A5568; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 850px; margin: 0 auto 40px auto; padding: 0 20px; color: var(--text-color); background-color: var(--bg-color); }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+        .nav-links a { text-decoration: none; color: var(--text-color); margin-right: 20px; font-weight: 600; }
+        .nav-links a.active { color: var(--accent-color); }
+        h2 { color: var(--accent-color); margin-top: 40px; border-left: 4px solid var(--accent-color); padding-left: 10px; }
+        
+        .search-box { width: 100%; padding: 12px; margin: 20px 0; border-radius: 6px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); font-size: 1rem; }
+        .pub-item { background: var(--card-bg); border: 1px solid var(--border-color); padding: 15px; border-radius: 6px; margin-bottom: 10px; }
+        footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience & Education</a>
+            <a href="publications.html" class="active">Publications & Research</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Peer-Reviewed Research Publications</h2>
+        
+        <!-- Live search input framework -->
+        <input type="text" id="pubSearch" class="search-box" onkeyup="filterPublications()" placeholder="🔍 Search publications by keyword (e.g., Vanadium, Hydride, SPS)...">
+
+        <div id="pubList">
+            <div class="pub-item"><strong>Devanshi Bhardwaj</strong>, et al. "Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites." <em>Frontiers in Nuclear Engineering</em>.</div>
+            <div class="pub-item"><strong>Devanshi Bhardwaj</strong>, et al. "Synthesis of Phase-Pure Vanadium Dioxide (VO₂) Thin Films via Reactive Pulsed Laser Deposition." <em>Journal of Applied Physics</em>.</div>
+            <div class="pub-item">DJ Sprouster, <strong>Devanshi Bhardwaj</strong>, et al. "Low-Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride." <em>Journal of Nuclear Materials</em>.</div>
+        </div>
+    </main>
+
+    <footer><p>© 2026 Dr. Devanshi Bhardwaj</p></footer>
+
+    <script>
+        function filterPublications() {
+            const input = document.getElementById('pubSearch').value.toLowerCase();
+            const items = document.getElementsByClassName('pub-item');
+            
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].innerText.toLowerCase().includes(input)) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
