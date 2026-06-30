@@ -74,7 +74,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
         .metric-value {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: bold;
             color: var(--accent-color);
             margin: 5px 0;
@@ -159,54 +159,114 @@
     <main>
         <h2>Research Impact Metrics</h2>
         
-        <!-- Live Scholar Metrics Dashboard Framework -->
+        <!-- Clean numerical cards that render immediately -->
         <div class="metrics-container">
             <div class="metric-card">
                 <div class="metric-label">Total Citations</div>
-                <div class="metric-value" id="scholar-citations">Loading...</div>
+                <div class="metric-value">235+</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">h-index</div>
-                <div class="metric-value" id="scholar-hindex">Loading...</div>
+                <div class="metric-value">8</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">i10-index</div>
-                <div class="metric-value" id="scholar-i10index">Loading...</div>
+                <div class="metric-value">7</div>
             </div>
         </div>
 
         <h2>Peer-Reviewed Publications</h2>
         
-        <input type="text" id="pubSearch" class="search-box" onkeyup="filterPublications()" placeholder="🔍 Filter publications by keyword (e.g., Vanadium, Hydride, Sputtering)...">
+        <input type="text" id="pubSearch" class="search-box" onkeyup="filterPublications()" placeholder="🔍 Search publications by keyword (e.g., Vanadium, Hydride, PLD, Sputtering)...">
 
         <div id="pubList">
             <!-- Paper 1 -->
             <div class="pub-item">
-                <div class="pub-title">Low-Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride</div>
-                <div class="pub-authors">DJ Sprouster, <strong>Devanshi Bhardwaj</strong>, et al.</div>
-                <div class="pub-journal">Journal of Nuclear Materials, 2026</div>
+                <div class="pub-title">Measurement of the hysteretic thermal properties of W-doped and undoped nanocrystalline powders of VO₂</div>
+                <div class="pub-authors">CL Gomez-Heredia, JA Ramirez-Rincon, <strong>Devanshi Bhardwaj</strong>, P Rajasekar, J Ordonez-Miranda, O Arés, AM Umarji, J Drevillon, K Joulain, Y Ezzahri, JJ Alvarado-Gil</div>
+                <div class="pub-journal">Scientific Reports, 9(1), 14687 (2019)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.co.in/citations?view_op=view_citation&citation_for_view=iCPxGPAAAAAJ:d1gkVwhDPL0C" target="_blank" class="pub-btn">Google Scholar Link</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:9yKSV6_Fv44C" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
 
             <!-- Paper 2 -->
             <div class="pub-item">
-                <div class="pub-title">Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites</div>
-                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, et al.</div>
-                <div class="pub-journal">Frontiers in Nuclear Engineering, 2024</div>
+                <div class="pub-title">Synthesis of phase pure vanadium dioxide (VO₂) thin film by reactive pulsed laser deposition</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, A Goswami, AM Umarji</div>
+                <div class="pub-journal">Journal of Applied Physics, 124(13), 135301 (2018)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.co.in/citations?user=iCPxGPAAAAAJ" target="_blank" class="pub-btn">Google Scholar Link</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:u-x6o8ySG0sC" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
 
             <!-- Paper 3 -->
             <div class="pub-item">
-                <div class="pub-title">Synthesis of Phase-Pure Vanadium Dioxide (VO₂) Thin Films via Reactive Pulsed Laser Deposition</div>
-                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, et al.</div>
-                <div class="pub-journal">Journal of Applied Physics, 2020</div>
+                <div class="pub-title">Highly photoresponsive VO₂ (M1) thin films synthesized by DC reactive sputtering</div>
+                <div class="pub-authors">IJ Tadeo, <strong>Devanshi Bhardwaj</strong>, D Sheela, SB Krupanidhi, AM Umarji</div>
+                <div class="pub-journal">Journal of Materials Science: Materials in Electronics, 31, 5472–5480 (2020)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.co.in/citations?user=iCPxGPAAAAAJ" target="_blank" class="pub-btn">Google Scholar Link</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:u573YF86HJgC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 4 -->
+            <div class="pub-item">
+                <div class="pub-title">Microwave-assisted synthesis of reduced graphene oxide/V₂O₅ nano-composite as an efficient photocatalyst for dye degradation</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, S Sangwan, SA Shivashankar, AM Umarji</div>
+                <div class="pub-journal">Bulletin of Materials Science, 45(3), 135 (2022)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:zY8GoXKSYxUC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 5 -->
+            <div class="pub-item">
+                <div class="pub-title">Fabrication of smooth thin film of vanadium oxides (VOₓ) using pulsed laser deposition</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, DK Singh, SB Krupanidhi, AM Umarji</div>
+                <div class="pub-journal">Applied Physics A, 126(3), 157 (2020)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:d1gkVwhDPL0C" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 6 -->
+            <div class="pub-item">
+                <div class="pub-title">Low Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride</div>
+                <div class="pub-authors">DJ Sprouster, M Ouyang, N Cetiner, P Negi, A Sharma, <strong>Devanshi Bhardwaj</strong></div>
+                <div class="pub-journal">Journal of Nuclear Materials, 609, 155770 (2025)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:Y0pCki6q_DkC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 7 -->
+            <div class="pub-item">
+                <div class="pub-title">Understanding the role of ionic flux on the polarity of the exposed surfaces of ZnO</div>
+                <div class="pub-authors">A Vijay, A Mukhopadhyaya, V Shrivastava, <strong>Devanshi Bhardwaj</strong>, AK Ganguli, S Vaidya</div>
+                <div class="pub-journal">Physical Chemistry Chemical Physics, 22(27), 15427-15436 (2020)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:Tyk-4Ss8FVUC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 8 -->
+            <div class="pub-item">
+                <div class="pub-title">Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, B Cheng, D Sprouster, W Cunningham, N Rani, JR Trelewicz</div>
+                <div class="pub-journal">Frontiers in Nuclear Engineering, 3, 1352667 (2024)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:qjYADgC8gCJC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 9 -->
+            <div class="pub-item">
+                <div class="pub-title">Scandium: An efficient dopant to modulate the optical spectrum of vanadium dioxide (VO₂)</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, AM Umarji</div>
+                <div class="pub-journal">SN Applied Sciences, 2(9), 1553 (2020)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:2osOgNQ5qMEC" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
         </div>
@@ -217,30 +277,6 @@
     </footer>
 
     <script>
-        // LIVE DYNAMIC GOOGLE SCHOLAR DATA FETCHING LOGIC
-        async function fetchScholarMetrics() {
-            const scholarId = "iCPxGPAAAAAJ";
-            const proxyUrl = `https://api.scholar.benschmidt.org/profile?id=${scholarId}`;
-            
-            try {
-                const response = await fetch(proxyUrl);
-                if (!response.ok) throw new Error('Network issue');
-                const data = await response.json();
-                
-                if (data && data.citations) {
-                    document.getElementById('scholar-citations').innerText = data.citations.total || "0";
-                    document.getElementById('scholar-hindex').innerText = data.citations.h_index || "0";
-                    document.getElementById('scholar-i10index').innerText = data.citations.i10_index || "0";
-                }
-            } catch (error) {
-                console.log("Scholar API proxy rate-limited. Falling back to platform anchors.");
-                // Graceful fallback anchors pointing directly to live profile data
-                document.getElementById('scholar-citations').innerHTML = `<a href="https://scholar.google.co.in/citations?user=${scholarId}" target="_blank" style="font-size:1.1rem; color:var(--accent-color); text-decoration:none;">View Live Tracker ↗</a>`;
-                document.getElementById('scholar-hindex').innerHTML = `<a href="https://scholar.google.co.in/citations?user=${scholarId}" target="_blank" style="font-size:1.1rem; color:var(--accent-color); text-decoration:none;">View Profile ↗</a>`;
-                document.getElementById('scholar-i10index').innerHTML = `<a href="https://scholar.google.co.in/citations?user=${scholarId}" target="_blank" style="font-size:1.1rem; color:var(--accent-color); text-decoration:none;">View Profile ↗</a>`;
-            }
-        }
-
         function filterPublications() {
             const input = document.getElementById('pubSearch').value.toLowerCase();
             const items = document.getElementsByClassName('pub-item');
@@ -261,10 +297,9 @@
             localStorage.setItem('theme', targetTheme);
         }
 
-        // Initialize script dependencies
+        // Apply dark/light layout settings dynamically
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
-        window.onload = fetchScholarMetrics;
     </script>
 </body>
 </html>
