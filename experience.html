@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Dr. Devanshi Bhardwaj</title>
+    <style>
+        :root { --bg-color: #F7FAFC; --card-bg: #ffffff; --text-color: #2D3748; --heading-color: #1A202C; --accent-color: #2B6CB0; --border-color: #E2E8F0; }
+        [data-theme="dark"] { --bg-color: #1A202C; --card-bg: #2D3748; --text-color: #E2E8F0; --heading-color: #F7FAFC; --accent-color: #63B3ED; --border-color: #4A5568; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 850px; margin: 0 auto 40px auto; padding: 0 20px; color: var(--text-color); background-color: var(--bg-color); }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+        .nav-links a { text-decoration: none; color: var(--text-color); margin-right: 20px; font-weight: 600; }
+        .nav-links a.active { color: var(--accent-color); }
+        h2 { color: var(--accent-color); margin-top: 40px; border-left: 4px solid var(--accent-color); padding-left: 10px; }
+        
+        .exp-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 22px; border-radius: 8px; margin-bottom: 15px; cursor: pointer; transition: transform 0.2s; }
+        .exp-card:hover { transform: translateY(-2px); }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .exp-company { color: var(--text-color); font-weight: 600; opacity: 0.9; }
+        .exp-location { color: #718096; font-style: italic; }
+        .interactive-badge { font-size: 0.8rem; color: var(--accent-color); font-weight: bold; margin-top: 5px; display: inline-block; }
+        .collapsible-content { display: none; margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px; }
+        .exp-bullets { padding-left: 20px; }
+        .exp-bullets li { margin-bottom: 6px; text-align: justify; }
+        footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html" class="active">Experience & Education</a>
+            <a href="publications.html">Publications & Research</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Professional Experience</h2>
+        <p style="color:#718096; font-style:italic;">💡 Click on any position card to expand or collapse detailed responsibilities.</p>
+
+        <div class="exp-card" onclick="toggleDetails('consultant')">
+            <div class="exp-header">
+                <div>
+                    <h3 style="margin:0;">Materials & Process Engineering Consultant</h3>
+                    <div class="exp-company">Freelance / Technical Advisory <span class="exp-location">— Union City, CA</span></div>
+                </div>
+                <div style="color:#718096;">March 2025 – Present</div>
+            </div>
+            <span class="interactive-badge" id="badge-consultant">▶ Click to reveal bullets</span>
+            <div class="collapsible-content" id="consultant">
+                <ul class="exp-bullets">
+                    <li>Deliver advanced process optimization, thin-film tuning, and material characterization analysis for semiconductor hardware clients.</li>
+                    <li>Optimize PVD/CVD thin-film deposition windows to maximize film morphology uniformity.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-card" onclick="toggleDetails('postdoc')">
+            <div class="exp-header">
+                <div>
+                    <h3 style="margin:0;">Postdoctoral Research Associate</h3>
+                    <div class="exp-company">Stony Brook University <span class="exp-location">— Stony Brook, NY</span></div>
+                </div>
+                <div style="color:#718096;">Sept 2021 – Feb 2025</div>
+            </div>
+            <span class="interactive-badge" id="badge-postdoc">▶ Click to reveal bullets</span>
+            <div class="collapsible-content" id="postdoc">
+                <ul class="exp-bullets">
+                    <li>Executed core research milestones for a multi-million dollar ARPA-E (MIITNER) fusion project.</li>
+                    <li>Pioneered the synthesis and structural stabilization of novel Be-based beryllides utilizing Spark Plasma Sintering (SPS).</li>
+                    <li>Managed and calibrated ultra-high vacuum (UHV) systems down to 10⁻⁸ Torr.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>© 2026 Dr. Devanshi Bhardwaj</p></footer>
+
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            const badge = document.getElementById('badge-' + id);
+            if (element.style.display === 'block') {
+                element.style.display = 'none';
+                badge.innerText = '▶ Click to reveal bullets';
+            } else {
+                element.style.display = 'block';
+                badge.innerText = '▼ Click to hide bullets';
+            }
+        }
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
