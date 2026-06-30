@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Devanshi Bhardwaj | Materials Scientist & Process Engineer</title>
+    <title>Dr. Devanshi Bhardwaj | Process Engineer & Materials Scientist</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -17,11 +17,41 @@
         header {
             padding: 40px 0;
             border-bottom: 2px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
-        h1 { color: #1A202C; margin-bottom: 5px; font-size: 2.5rem; }
-        .subtitle { color: #4A5568; font-size: 1.2rem; font-weight: 500; }
+        .header-text { flex: 1; }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2B6CB0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1A202C; margin: 0 0 5px 0; font-size: 2.5rem; }
+        .subtitle { color: #4A5568; font-size: 1.2rem; font-weight: 500; margin-bottom: 15px; }
+        .links-container { display: flex; gap: 15px; }
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            background: #2B6CB0;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-link:hover { background: #2B529A; }
+        .btn-secondary { background: #4A5568; }
+        .btn-secondary:hover { background: #2D3748; }
         h2 { color: #2B6CB0; margin-top: 40px; font-size: 1.5rem; border-left: 4px solid #2B6CB0; padding-left: 10px; }
         p { margin-bottom: 20px; text-align: justify; }
+        .competency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
+        .competency-item { background: #EDF2F7; padding: 15px; border-radius: 6px; border-left: 3px solid #4A5568; }
         .project-card {
             background: #ffffff;
             border: 1px solid #E2E8F0;
@@ -48,64 +78,73 @@
 <body>
 
     <header>
-        <h1>Dr. Devanshi Bhardwaj</h1>
-        <div class="subtitle">Materials Scientist, Process Engineer & Independent Technical Consultant</div>
+        <img src="profile.png" alt="Dr. Devanshi Bhardwaj" class="profile-img" onerror="this.style.display='none'">
+        <div class="header-text">
+            <h1>Dr. Devanshi Bhardwaj</h1>
+            <div class="subtitle">Process Engineer | Materials Scientist | Independent Technical Consultant</div>
+            <div class="links-container">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="btn-link">LinkedIn Profile</a>
+                <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="btn-link btn-secondary">Google Scholar</a>
+            </div>
+        </div>
     </header>
 
     <main>
         <section>
-            <h2>About Expertise</h2>
+            <h2>Professional Profile</h2>
             <p>
-                I am a Materials Scientist and Process Engineer specializing in thin-film fabrication, complex material synthesis, and advanced materials characterization. With a deep foundation in vacuum environments and semiconductor deposition methodologies, my work focuses on bridging the gap between fundamental laboratory research and scalable industrial applications. 
+                Materials Scientist and Process Engineer specializing in thin-film fabrication, complex material synthesis, and advanced characterization frameworks. Proven expertise in optimizing semiconductor deposition hardware environments, managing chemical protocol safety workflows, and scaling production-oriented engineering models. Transitioning discovery-phase research paradigms into high-yield, stable industrial manufacturing processes.
             </p>
             <p>
-                As an independent consultant, I partner with semiconductor and ceramic engineering teams to analyze thin-film profiles, optimize process stability, and troubleshoot complex material behaviors. My technical background includes extensive leadership in laboratory operations, chemical protocol management, and hazardous safety workflows.
+                Currently operating as an Independent Technical Consultant, partnering with semiconductor, ceramic, and advanced electronics hardware industries to diagnose thin-film structural profiles, troubleshoot manufacturing deviations, and deliver rigorous materials characterization analytics.
             </p>
         </section>
 
         <section>
-            <h2>Technical Core Competencies</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div>
-                    <strong>Thin-Film & Synthesis:</strong> Vacuum Deposition, Hardware Environments, Complex Material Systems (VO₂).
+            <h2>Industrial Core Competencies</h2>
+            <div class="competency-grid">
+                <div class="competency-item">
+                    <strong>Process Engineering & Optimization:</strong><br>
+                    Thin-Film Vacuum Deposition, Statistical Process Control (SPC), Design of Experiments (DOE), High-Vacuum Hardware Environments.
                 </div>
-                <div>
-                    <strong>Characterization & Analytics:</strong> Advanced Material Profiling, Structural Analysis, Data Interpretation.
+                <div class="competency-item">
+                    <strong>Root-Cause Analysis & Operations:</strong><br>
+                    Materials Characterization Analytics, Structural Integrity Testing, Chemical Safety Management & Compliance Protocols.
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Featured Industry & Research Case Studies</h2>
+            <h2>Featured Process & Materials Engineering Case Studies</h2>
             
             <div class="project-card">
-                <h3>Thin-Film Synthesis & Material Architecture</h3>
+                <h3>Thin-Film Synthesis & Crystalline Transition Architecture</h3>
                 <p>
-                    Directed high-vacuum deposition parameters and synthesized complex material matrices to isolate phase-transition behaviors in vanadium dioxide thin films. Focused on structural uniformity, step coverage, and electronic property profiling tailored for next-generation hardware applications.
+                    Synthesized complex material matrices and engineered localized high-vacuum deposition configurations to isolate crystalline phase-transition mechanics in vanadium dioxide thin films. Optimized structural uniformity, step coverage metrics, and electronic property parameters critical for production-scale semiconductor applications.
                 </p>
                 <div class="tags">
-                    <span class="tag">Vacuum Systems</span>
-                    <span class="tag">Thin-Film Fabrication</span>
-                    <span class="tag">Material Optimization</span>
+                    <span class="tag">Vacuum Processing</span>
+                    <span class="tag">Thin-Film Synthesis</span>
+                    <span class="tag">Complex Materials</span>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Ceramic Engineering for Advanced Fusion Applications</h3>
+                <h3>Ceramic Engineering for Extreme Environment Fusion Applications</h3>
                 <p>
-                    Investigated the long-term structural integrity, thermal mechanics, and chemical stability of zirconium and yttrium hydrides under rigorous environmental stress models. This engineering analysis provides core data metrics for extreme-environment hardware scaling.
+                    Research conducted at Stony Brook University analyzing the thermal mechanics, structural degradation metrics, and chemical stability profiles of zirconium and yttrium hydrides. Translated behavioral insights under high-stress criteria into optimized material specifications for nuclear fusion containment hardware components.
                 </p>
                 <div class="tags">
-                    <span class="tag">Ceramic Engineering</span>
-                    <span class="tag">High-Stress Analysis</span>
-                    <span class="tag">Material Characterization</span>
+                    <span class="tag">Ceramic Materials</span>
+                    <span class="tag">Root-Cause Analysis</span>
+                    <span class="tag">Stony Brook University</span>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Dr. Devanshi Bhardwaj | Built and Hosted via GitHub Pages</p>
+        <p>© 2026 Dr. Devanshi Bhardwaj | Process Engineering Portfolio</p>
     </footer>
 
 </body>
