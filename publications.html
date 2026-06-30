@@ -5,44 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Dr. Devanshi Bhardwaj</title>
     <style>
-        :root { --bg-color: #F7FAFC; --card-bg: #ffffff; --text-color: #2D3748; --heading-color: #1A202C; --accent-color: #2B6CB0; --border-color: #E2E8F0; }
-        [data-theme="dark"] { --bg-color: #1A202C; --card-bg: #2D3748; --text-color: #E2E8F0; --heading-color: #F7FAFC; --accent-color: #63B3ED; --border-color: #4A5568; }
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 850px; margin: 0 auto 40px auto; padding: 0 20px; color: var(--text-color); background-color: var(--bg-color); }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
-        .nav-links a { text-decoration: none; color: var(--text-color); margin-right: 20px; font-weight: 600; }
+        :root {
+            --bg-color: #F7FAFC;
+            --card-bg: #ffffff;
+            --text-color: #2D3748;
+            --heading-color: #1A202C;
+            --accent-color: #2B6CB0;
+            --border-color: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1A202C;
+            --card-bg: #2D3748;
+            --text-color: #E2E8F0;
+            --heading-color: #F7FAFC;
+            --accent-color: #63B3ED;
+            --border-color: #4A5568;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background 0.3s, color 0.3s;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-right: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
         .nav-links a.active { color: var(--accent-color); }
-        h2 { color: var(--accent-color); margin-top: 40px; border-left: 4px solid var(--accent-color); padding-left: 10px; }
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 0.85rem;
+        }
         
-        .search-box { width: 100%; padding: 12px; margin: 20px 0; border-radius: 6px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color); font-size: 1rem; }
-        .pub-item { background: var(--card-bg); border: 1px solid var(--border-color); padding: 15px; border-radius: 6px; margin-bottom: 10px; }
+        h2 { color: var(--accent-color); margin-top: 40px; font-size: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 10px; padding-top: 5px; }
+        
+        /* METRICS DASHBOARD STYLING */
+        .metrics-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 5px 0;
+        }
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        
+        .pub-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin: 0 0 8px 0;
+        }
+        .pub-authors {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .pub-journal {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            font-style: italic;
+        }
+        .pub-links {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+        }
+        .pub-btn {
+            font-size: 0.8rem;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .pub-btn:hover {
+            background: var(--accent-color);
+            color: #ffffff;
+        }
+
         footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="experience.html">Experience & Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="education.html">Education</a>
             <a href="publications.html" class="active">Publications & Research</a>
         </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
     </nav>
 
     <main>
-        <h2>Peer-Reviewed Research Publications</h2>
+        <h2>Research Impact Metrics</h2>
         
-        <!-- Live search input framework -->
-        <input type="text" id="pubSearch" class="search-box" onkeyup="filterPublications()" placeholder="🔍 Search publications by keyword (e.g., Vanadium, Hydride, SPS)...">
+        <!-- Live Scholar Metrics Dashboard Framework -->
+        <div class="metrics-container">
+            <div class="metric-card">
+                <div class="metric-label">Total Citations</div>
+                <div class="metric-value" id="scholar-citations">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">h-index</div>
+                <div class="metric-value" id="scholar-hindex">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">i10-index</div>
+                <div class="metric-value" id="scholar-i10index">Loading...</div>
+            </div>
+        </div>
+
+        <h2>Peer-Reviewed Publications</h2>
+        
+        <input type="text" id="pubSearch" class="search-box" onkeyup="filterPublications()" placeholder="🔍 Filter publications by keyword (e.g., Vanadium, Hydride, Sputtering)...">
 
         <div id="pubList">
-            <div class="pub-item"><strong>Devanshi Bhardwaj</strong>, et al. "Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites." <em>Frontiers in Nuclear Engineering</em>.</div>
-            <div class="pub-item"><strong>Devanshi Bhardwaj</strong>, et al. "Synthesis of Phase-Pure Vanadium Dioxide (VO₂) Thin Films via Reactive Pulsed Laser Deposition." <em>Journal of Applied Physics</em>.</div>
-            <div class="pub-item">DJ Sprouster, <strong>Devanshi Bhardwaj</strong>, et al. "Low-Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride." <em>Journal of Nuclear Materials</em>.</div>
+            <!-- Paper 1 -->
+            <div class="pub-item">
+                <div class="pub-title">Low-Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride</div>
+                <div class="pub-authors">DJ Sprouster, <strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">Journal of Nuclear Materials, 2026</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.co.in/citations?view_op=view_citation&citation_for_view=iCPxGPAAAAAJ:d1gkVwhDPL0C" target="_blank" class="pub-btn">Google Scholar Link</a>
+                </div>
+            </div>
+
+            <!-- Paper 2 -->
+            <div class="pub-item">
+                <div class="pub-title">Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">Frontiers in Nuclear Engineering, 2024</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.co.in/citations?user=iCPxGPAAAAAJ" target="_blank" class="pub-btn">Google Scholar Link</a>
+                </div>
+            </div>
+
+            <!-- Paper 3 -->
+            <div class="pub-item">
+                <div class="pub-title">Synthesis of Phase-Pure Vanadium Dioxide (VO₂) Thin Films via Reactive Pulsed Laser Deposition</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">Journal of Applied Physics, 2020</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.co.in/citations?user=iCPxGPAAAAAJ" target="_blank" class="pub-btn">Google Scholar Link</a>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer><p>© 2026 Dr. Devanshi Bhardwaj</p></footer>
+    <footer>
+        <p>© 2026 Dr. Devanshi Bhardwaj | Analytics Integrated Portfolio</p>
+    </footer>
 
     <script>
+        // LIVE DYNAMIC GOOGLE SCHOLAR DATA FETCHING LOGIC
+        async function fetchScholarMetrics() {
+            const scholarId = "iCPxGPAAAAAJ";
+            const proxyUrl = `https://api.scholar.benschmidt.org/profile?id=${scholarId}`;
+            
+            try {
+                const response = await fetch(proxyUrl);
+                if (!response.ok) throw new Error('Network issue');
+                const data = await response.json();
+                
+                if (data && data.citations) {
+                    document.getElementById('scholar-citations').innerText = data.citations.total || "0";
+                    document.getElementById('scholar-hindex').innerText = data.citations.h_index || "0";
+                    document.getElementById('scholar-i10index').innerText = data.citations.i10_index || "0";
+                }
+            } catch (error) {
+                console.log("Scholar API proxy rate-limited. Falling back to platform anchors.");
+                // Graceful fallback anchors pointing directly to live profile data
+                document.getElementById('scholar-citations').innerHTML = `<a href="https://scholar.google.co.in/citations?user=${scholarId}" target="_blank" style="font-size:1.1rem; color:var(--accent-color); text-decoration:none;">View Live Tracker ↗</a>`;
+                document.getElementById('scholar-hindex').innerHTML = `<a href="https://scholar.google.co.in/citations?user=${scholarId}" target="_blank" style="font-size:1.1rem; color:var(--accent-color); text-decoration:none;">View Profile ↗</a>`;
+                document.getElementById('scholar-i10index').innerHTML = `<a href="https://scholar.google.co.in/citations?user=${scholarId}" target="_blank" style="font-size:1.1rem; color:var(--accent-color); text-decoration:none;">View Profile ↗</a>`;
+            }
+        }
+
         function filterPublications() {
             const input = document.getElementById('pubSearch').value.toLowerCase();
             const items = document.getElementsByClassName('pub-item');
@@ -55,8 +253,18 @@
                 }
             }
         }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        }
+
+        // Initialize script dependencies
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
+        window.onload = fetchScholarMetrics;
     </script>
 </body>
 </html>
