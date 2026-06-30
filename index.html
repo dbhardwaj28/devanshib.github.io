@@ -136,13 +136,15 @@
     </header>
 
     <main>
+        <!-- PROFILE EXECUTIVE SUMMARY -->
         <section>
             <h2>Professional Profile</h2>
             <p>
-                Results-driven Materials Scientist with a PhD in Chemistry and extensive expertise in thin-film deposition, advanced structural characterization, and ultra-high vacuum (UHV) systems[cite: 1]. Demonstrated success in executing high-stakes research milestones for multi-million dollar ARPA-E energy projects, engineering advanced ceramic coatings, and designing custom laboratory instrumentation[cite: 1]. Adept at troubleshooting complex vacuum hardware, implementing Design of Experiments (DoE), and collaborating with multidisciplinary teams to translate fundamental materials science into robust, reproducible technical processes[cite: 1].
+                Results-driven Materials Scientist and Process Engineer with a Ph.D. in Chemistry and extensive expertise in thin-film deposition, advanced structural characterization, and ultra-high vacuum (UHV) systems. Demonstrated success in executing high-stakes research milestones for multi-million dollar ARPA-E energy projects, engineering advanced ceramic coatings, and designing custom laboratory instrumentation. Adept at troubleshooting complex vacuum hardware, implementing Design of Experiments (DoE), and collaborating across multidisciplinary boundaries to translate fundamental materials science into robust, reproducible technical processes.
             </p>
         </section>
 
+        <!-- TECHNICAL SKILLS SECTIONS -->
         <section>
             <h2>Skills & Technical Expertise</h2>
             <div class="skills-grid">
@@ -150,38 +152,38 @@
                 <div class="skills-category">
                     <h3>Thin-Film Deposition & Processing</h3>
                     <ul class="skills-list">
-                        <li>Pulsed Laser Deposition (PLD), Spark Plasma Sintering (SPS)[cite: 1]</li>
-                        <li>Magnetron Sputtering (including DC Reactive Sputtering)[cite: 1]</li>
-                        <li>Chemical Vapor Deposition (CVD), Hot-Press Synthesis[cite: 1]</li>
-                        <li>Ultrasonic Nebulized Spray Pyrolysis (UNSPACM)[cite: 1]</li>
+                        <li>Pulsed Laser Deposition (PLD), Spark Plasma Sintering (SPS)</li>
+                        <li>Magnetron Sputtering (including DC Reactive Sputtering)</li>
+                        <li>Chemical Vapor Deposition (CVD), Hot-Press Synthesis</li>
+                        <li>Ultrasonic Nebulized Spray Pyrolysis (UNSPACM)</li>
                     </ul>
                 </div>
 
                 <div class="skills-category">
                     <h3>Advanced Structural & Chemical Characterization</h3>
                     <ul class="skills-list">
-                        <li>X-ray Diffraction (XRD) & X-ray Reflectivity (XRR)[cite: 1]</li>
-                        <li>Scanning (SEM) & Transmission (TEM) Electron Microscopy[cite: 1]</li>
-                        <li>X-ray Photoelectron Spectroscopy (XPS) & Atomic Force Microscopy (AFM)[cite: 1]</li>
-                        <li>Laser Flash Analysis (LFA), Dilatometry, UV-Vis/Infra-red Spectroscopy[cite: 1]</li>
+                        <li>X-ray Diffraction (XRD) & X-ray Reflectivity (XRR)</li>
+                        <li>Scanning (SEM) & Transmission (TEM) Electron Microscopy</li>
+                        <li>X-ray Photoelectron Spectroscopy (XPS) & Atomic Force Microscopy (AFM)</li>
+                        <li>Laser Flash Analysis (LFA), Dilatometry, UV-Vis/Infra-red Spectroscopy</li>
                     </ul>
                 </div>
 
                 <div class="skills-category">
                     <h3>Vacuum & Systems Engineering</h3>
                     <ul class="skills-list">
-                        <li>Extensive expertise in ultra-high vacuum (UHV) technologies[cite: 1]</li>
-                        <li>Technical system calibration & hardware troubleshooting[cite: 1]</li>
-                        <li>Engineering of custom laboratory instrumentation & complex configurations[cite: 1]</li>
+                        <li>Extensive expertise in ultra-high vacuum (UHV) technologies</li>
+                        <li>Technical system calibration & hardware troubleshooting</li>
+                        <li>Engineering of custom laboratory instrumentation & complex configurations</li>
                     </ul>
                 </div>
 
                 <div class="skills-category">
                     <h3>Data Analysis & Engineering Software</h3>
                     <ul class="skills-list">
-                        <li>Statistical optimization via Taguchi-based Design of Experiments (DoE)[cite: 1]</li>
-                        <li>Proficient in Minitab, Origin, ImageJ, XPSPeak41[cite: 1]</li>
-                        <li>Advanced characterization analysis via GSAS & X'Pert Highscore Plus[cite: 1]</li>
+                        <li>Statistical optimization via Taguchi-based Design of Experiments (DoE)</li>
+                        <li>Proficient in Minitab, Origin, ImageJ, XPSPeak41</li>
+                        <li>Advanced characterization analysis via GSAS & X'Pert Highscore Plus</li>
                     </ul>
                 </div>
 
@@ -200,4 +202,10 @@
             document.documentElement.setAttribute('data-theme', targetTheme);
             localStorage.setItem('theme', targetTheme);
         }
-        const savedTheme = localStorage.getItem('Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+        
+        // Restore user preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
