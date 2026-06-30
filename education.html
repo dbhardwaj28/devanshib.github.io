@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Dr. Devanshi Bhardwaj</title>
+    <style>
+        :root {
+            --bg-color: #F7FAFC;
+            --card-bg: #ffffff;
+            --text-color: #2D3748;
+            --heading-color: #1A202C;
+            --accent-color: #2B6CB0;
+            --border-color: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1A202C;
+            --card-bg: #2D3748;
+            --text-color: #E2E8F0;
+            --heading-color: #F7FAFC;
+            --accent-color: #63B3ED;
+            --border-color: #4A5568;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background 0.3s, color 0.3s;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-right: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .nav-links a.active { color: var(--accent-color); }
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 0.85rem;
+        }
+        
+        h2 { color: var(--accent-color); margin-top: 40px; font-size: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 10px; padding-top: 5px; }
+        
+        .edu-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .edu-header h3 { margin: 0; color: var(--heading-color); font-size: 1.3rem; }
+        .edu-institution { color: var(--text-color); font-weight: 600; font-size: 1.1rem; margin-top: 4px; opacity: 0.9; }
+        .edu-location { color: #718096; font-weight: 400; font-size: 0.95rem; font-style: italic; }
+        .edu-time { color: #718096; font-size: 0.95rem; font-weight: 500; white-space: nowrap; margin-top: 4px; }
+        .edu-details { margin-top: 12px; text-align: justify; font-size: 1rem; }
+        
+        footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
+    </style>
+</head>
+<body>
 
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="publications.html">Publications & Research</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    </nav>
+
+    <main>
+        <h2>Education & Academic Credentials</h2>
+
+        <!-- PHD -->
+        <div class="edu-card">
+            <div class="edu-header">
+                <div>
+                    <h3>Ph.D. in Materials Science</h3>
+                    <div class="edu-institution">Indian Institute of Science (IISc) <span class="edu-location">— Bengaluru, India</span></div>
+                </div>
+                <div class="edu-time">July 2015 – Dec 2020</div>
+            </div>
+            <p class="edu-details">
+                <strong>Thesis Title:</strong> <em>Vanadium dioxide: Bulk and Thin Films for Device Applications</em><br>
+                Advanced training in solid-state synthesis kinetics, electronic bandgap tuning, thin-film fabrication configurations, and ultra-high vacuum hardware operations. Coursework completed with a first-semester CGPA of 6.3/8.
+            </p>
+        </div>
+
+        <!-- MSC -->
+        <div class="edu-card">
+            <div class="edu-header">
+                <div>
+                    <h3>Master of Science (M.Sc.) in Chemistry</h3>
+                    <div class="edu-institution">Hansraj College, University of Delhi <span class="edu-location">— Delhi, India</span></div>
+                </div>
+                <div class="edu-time">July 2012 – June 2014</div>
+            </div>
+            <p class="edu-details">
+                Specialization in Inorganic Chemistry. Graduated with First-Class Honors (73.5%). Core coursework focused on advanced quantitative coordination complexes and analytical materials characterization methodologies.
+            </p>
+        </div>
+
+        <!-- BSC -->
+        <div class="edu-card">
+            <div class="edu-header">
+                <div>
+                    <h3>Bachelor of Science (B.Sc. Hons.) in Chemistry</h3>
+                    <div class="edu-institution">Hansraj College, University of Delhi <span class="edu-location">— Delhi, India</span></div>
+                </div>
+                <div class="edu-time">July 2009 – June 2012</div>
+            </div>
+            <p class="edu-details">
+                Graduated with Distinction (82.0%). Acquired a robust foundational technical framework spanning structural chemical thermodynamics, quantum transition matrices, and quantitative multi-user laboratory setups.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Dr. Devanshi Bhardwaj | Academic Portfolio</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        }
+        
+        // Synchronize and restore user dark mode setting
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
