@@ -3,311 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience | Dr. Devanshi Bhardwaj</title>
+    <title>Experience & Education | Dr. Devanshi Bhardwaj</title>
     <style>
+        /* Base Styling & Theme */
         :root {
-            --bg-color: #F7FAFC;
-            --card-bg: #ffffff;
-            --text-color: #2D3748;
-            --heading-color: #1A202C;
-            --accent-color: #2B6CB0;
-            --border-color: #E2E8F0;
+            --primary-color: #1a202c;
+            --text-color: #2d3748;
+            --light-text: #718096;
+            --border-color: #e2e8f0;
+            --max-width: 900px;
         }
-        [data-theme="dark"] {
-            --bg-color: #1A202C;
-            --card-bg: #2D3748;
-            --text-color: #E2E8F0;
-            --heading-color: #F7FAFC;
-            --accent-color: #63B3ED;
-            --border-color: #4A5568;
-        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            max-width: 850px;
-            margin: 0 auto 40px auto;
-            padding: 0 20px;
             color: var(--text-color);
-            background-color: var(--bg-color);
-            transition: background 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+            background-color: #f7fafc;
         }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
+
+        header {
+            background-color: #ffffff;
             border-bottom: 1px solid var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
         }
-        .nav-links a {
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: var(--light-text);
             text-decoration: none;
-            color: var(--text-color);
-            margin-right: 20px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            margin: 0 10px;
+            font-weight: 500;
         }
-        .nav-links a.active { color: var(--accent-color); }
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--border-color);
-            padding: 6px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            color: var(--text-color);
-            font-size: 0.85rem;
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
         }
-        
-        h2 { color: var(--accent-color); margin-top: 40px; font-size: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 10px; padding-top: 5px; }
-        p { margin-bottom: 15px; text-align: justify; }
-        
-        .exp-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 22px;
+
+        .container {
+            max-width: var(--max-width);
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
         }
-        .exp-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px -2px rgba(0,0,0,0.05);
+
+        .resume-section {
+            margin-bottom: 3rem;
         }
-        .exp-header {
+
+        .section-title {
+            font-size: 1.75rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
         }
-        .exp-header h3 { margin: 0; color: var(--heading-color); font-size: 1.25rem; }
-        .exp-company { color: var(--text-color); font-weight: 600; font-size: 1.05rem; margin-top: 2px; opacity: 0.9; }
-        .exp-location { color: #718096; font-weight: 400; font-size: 0.95rem; font-style: italic; }
-        .exp-time { color: #718096; font-size: 0.9rem; font-weight: 500; white-space: nowrap; margin-top: 2px; }
-        
-        .interactive-badge {
-            font-size: 0.8rem;
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-top: 8px;
-            display: inline-block;
-        }
-        .collapsible-content {
-            display: none;
-            margin-top: 15px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 15px;
-        }
-        .exp-bullets { padding-left: 20px; margin: 0; }
-        .exp-bullets li { margin-bottom: 8px; text-align: justify; font-size: 0.95rem; color: var(--text-color); }
 
-        .tags { margin-top: 12px; }
-        .tag {
-            background: #EBF8FF;
-            color: #2B6CB0;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-right: 6px;
+        .role-title, .degree-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .company-name, .institution-name {
+            font-size: 1.05rem;
+            color: #4a5568;
+            font-weight: 500;
+            margin-top: 0.25rem;
             display: inline-block;
         }
-        footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
+
+        .meta-block {
+            text-align: right;
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        .meta-block .date {
+            display: block;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .meta-block .location {
+            font-style: italic;
+        }
+
+        .accomplishment-list {
+            margin-top: 0.5rem;
+            padding-left: 1.25rem;
+        }
+
+        .accomplishment-list li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .degree-details {
+            margin-top: 0.25rem;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background-color: #ffffff;
+            margin-top: 4rem;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 640px) {
+            .timeline-header {
+                flex-direction: column;
+            }
+            .meta-block {
+                text-align: left;
+                margin-top: 0.5rem;
+            }
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="nav-links">
+    <header>
+        <h1>Dr. Devanshi Bhardwaj</h1>
+        <p>Materials Scientist & Process Engineer</p>
+        <nav>
             <a href="index.html">Home</a>
-            <a href="experience.html" class="active">Experience</a>
-            <a href="education.html">Education</a>
-            <a href="publications.html">Publications & Research</a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
-    </nav>
+            <a href="experience.html" class="active">Experience & Education</a>
+            <a href="publications.html">Publications</a>
+        </nav>
+    </header>
 
-    <main>
-        <h2>Professional Experience</h2>
-        <p style="color:#718096; font-style:italic; margin-bottom: 25px;">💡 Click on any position card below to expand and view the detailed engineering accomplishments.</p>
+    <main class="container">
+        
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="resume-section">
+            <h2 class="section-title">Professional Experience</h2>
 
-        <!-- CONSULTANT -->
-        <div class="exp-card" onclick="toggleDetails('consultant')">
-            <div class="exp-header">
-                <div>
-                    <h3>Materials & Process Engineering Consultant</h3>
-                    <div class="exp-company">Freelance / Technical Advisory <span class="exp-location">— Union City, CA</span></div>
+            <!-- Job 1 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="role-title">Materials & Process Engineering Consultant</h3>
+                        <span class="company-name">Freelance / Technical Advisory</span>
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">March 2025 - Present</span>[cite: 1]
+                        <span class="location">Union City, CA</span>[cite: 1]
+                    </div>
                 </div>
-                <div class="exp-time">March 2025 – Present</div>
-            </div>
-            <span class="interactive-badge" id="badge-consultant">▶ Click to view details</span>
-            <div class="collapsible-content" id="consultant">
-                <ul class="exp-bullets">
-                    <li>Deliver advanced process optimization, thin-film tuning, and characterization analysis for semiconductor and advanced composite clients.</li>
-                    <li>Optimize PVD/CVD thin-film deposition windows and processing parameters to maximize film morphology and uniformity.</li>
-                    <li>Utilize advanced structural and microstructural analysis via SPS, XRD, and SEM to resolve client engineering bottlenecks.</li>
-                    <li>Provide end-to-end technical documentation, reporting, and high-impact data visualizations for key industry stakeholders.</li>
+                <ul class="accomplishment-list">
+                    <li>Delivering independent expertise in advanced process optimization, thin-film structural tuning, and microstructural analysis to resolve complex engineering bottlenecks for semiconductor and composite clients[cite: 1].</li>
+                    <li>Leveraging high-resolution XRD and SEM microstructural evaluations to mitigate industrial fabrication hurdles and enhance process consistency for external partners[cite: 1].</li>
+                    <li>Offering expert manuscript support and strategic technical guidance to integrate fundamental research findings into scalable, reproducible industrial and laboratory protocols[cite: 1].</li>
                 </ul>
-                <div class="tags">
-                    <span class="tag">Process Tuning</span>
-                    <span class="tag">Thin Films</span>
-                    <span class="tag">Client Diagnostics</span>
-                </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- POSTDOC -->
-        <div class="exp-card" onclick="toggleDetails('postdoc')">
-            <div class="exp-header">
-                <div>
-                    <h3>Postdoctoral Research Associate</h3>
-                    <div class="exp-company">Stony Brook University <span class="exp-location">— Stony Brook, NY</span></div>
+            <!-- Job 2 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="role-title">Postdoctoral Research Associate</h3>
+                        <span class="company-name">Stony Brook University</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">September 2021 - February 2025</span>[cite: 1]
+                        <span class="location">Stony Brook, NY</span>[cite: 1]
+                    </div>
                 </div>
-                <div class="exp-time">Sept 2021 – Feb 2025</div>
-            </div>
-            <span class="interactive-badge" id="badge-postdoc">▶ Click to view details</span>
-            <div class="collapsible-content" id="postdoc">
-                <ul class="exp-bullets">
-                    <li>Executed core research milestones for a high-profile, multi-million dollar ARPA-E (MIITNER) project focused on advanced materials for nuclear and fusion energy applications.</li>
-                    <li>Pioneered the synthesis, dense optimization (100%), and structural stabilization of novel Be-based two-phase moderators and beryllides utilizing advanced Spark Plasma Sintering (SPS) and Hot-Press workflows.</li>
-                    <li>Authorized to safely handle, process, and characterize highly toxic Beryllium and Beryllium-containing materials under strict federal and institutional safety compliance parameters.</li>
-                    <li>Managed, calibrated, and performed routine leak-testing and hardware troubleshooting for ultra-high vacuum (UHV) systems, maintaining base pressures down to 10⁻⁸ Torr to guarantee zero system contamination.</li>
-                    <li>Evaluated phase purity, microstructural stability, and high-temperature thermal/physical properties using Laser Flash Analysis (LFA), dilatometry, and X-ray diffraction (XRD).</li>
-                    <li>Managed high-throughput laboratory workflows, monitored equipment safety queues, and onboarded/mentored multiple Ph.D. candidates.</li>
+                <ul class="accomplishment-list">
+                    <li>Executed core research milestones for high-profile, multi-million-dollar ARPA-E (MITNER), GAMOW, and ONWARDS projects focused on advanced materials for nuclear and fusion energy applications[cite: 1].</li>
+                    <li>Conducted comprehensive phase identification, structural stabilization, and macro-structural characterization using refinement suites including GSAS / GSAS-II and FullProf, with a baseline operational understanding of alternative platforms like TOPAS[cite: 1].</li>
+                    <li>Coordinated high-precision sample preparation workflows tailored specifically to meet strict beamline geometries and constraints for external user facilities and synchrotron-based characterization activities[cite: 1].</li>
+                    <li>Collaborated closely with Principal Investigators to manage the safe handling, tracking, and post-irradiation examination (PIE) of neutron-irradiated fuel/shield matrix samples, ensuring strict compliance with radiological controls and ALARA principles[cite: 1].</li>
+                    <li>Pioneered the synthesis and structural stabilization of novel Be-based two-phase moderators, metal hydrides, beryllides, and phase-pure beryllium carbide (Be<sub>2</sub>C) using advanced Spark Plasma Sintering (SPS), dilatometry, and hot-pressing processes[cite: 1].</li>
+                    <li>Appointed as Lab Safety Manager and authorized researcher to safely handle, process, and characterize highly toxic beryllium-containing materials, establishing strict laboratory protocols and ensuring absolute compliance with federal and institutional safety regulations[cite: 1].</li>
+                    <li>Managed high-throughput laboratory workflows, directed characterization queues, and onboarded/mentored incoming Ph.D. candidates in structural characterization and data processing workflows[cite: 1].</li>
                 </ul>
-                <div class="tags">
-                    <span class="tag">ARPA-E MIITNER</span>
-                    <span class="tag">Beryllides</span>
-                    <span class="tag">Spark Plasma Sintering</span>
-                    <span class="tag">UHV Systems</span>
-                </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- RESEARCH ASSOCIATE -->
-        <div class="exp-card" onclick="toggleDetails('ra')">
-            <div class="exp-header">
-                <div>
-                    <h3>Research Associate</h3>
-                    <div class="exp-company">Indian Institute of Science (IISc) <span class="exp-location">— Bengaluru, India</span></div>
+            <!-- Job 3 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="role-title">Research Associate</h3>
+                        <span class="company-name">Indian Institute of Science (IISc)</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">September 2020 - May 2021</span>[cite: 1]
+                        <span class="location">Bengaluru, India</span>[cite: 1]
+                    </div>
                 </div>
-                <div class="exp-time">Sept 2020 – May 2021</div>
-            </div>
-            <span class="interactive-badge" id="badge-ra">▶ Click to view details</span>
-            <div class="collapsible-content" id="ra">
-                <ul class="exp-bullets">
-                    <li>Demonstrated the precise gas-sensing properties of porous, phase-pure V₇O₁₆ thin films synthesized via Pulsed Laser Deposition (PLD).</li>
-                    <li>Spearheaded operational planning, scheduling, and preventative troubleshooting for department-wide vacuum and characterization suites (XRD, SEM, XPS), managing a high-volume queue of 25+ samples per week.</li>
-                    <li>Trained and mentored incoming graduate researchers on custom data acquisition workflows and experimental apparatus operations.</li>
+                <ul class="accomplishment-list">
+                    <li>Spearheaded operational planning, scheduling, and preventative maintenance for department-wide analytical instrumentation suites, managing a high-volume queue of 25+ samples per week for X-ray Diffraction (XRD), SEM imaging, and X-ray Photoelectron Spectroscopy (XPS)[cite: 1].</li>
+                    <li>Successfully synthesized and demonstrated precise gas-sensing properties of porous, phase-pure V<sub>7</sub>O<sub>16</sub> thin films leveraging Pulsed Laser Deposition (PLD) workflows[cite: 1].</li>
+                    <li>Onboarded and trained incoming doctoral candidates on a custom, home-built experimental apparatus and data acquisition workflows[cite: 1].</li>
                 </ul>
-                <div class="tags">
-                    <span class="tag">Pulsed Laser Deposition</span>
-                    <span class="tag">Equipment Ownership</span>
-                    <span class="tag">Vanadium Oxides</span>
-                </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- SRF -->
-        <div class="exp-card" onclick="toggleDetails('srf')">
-            <div class="exp-header">
-                <div>
-                    <h3>Senior Research Fellow</h3>
-                    <div class="exp-company">Indian Institute of Science (IISc) <span class="exp-location">— Bengaluru, India</span></div>
+            <!-- Job 4 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="role-title">Senior & Junior Research Fellow</h3>
+                        <span class="company-name">Indian Institute of Science (IISc)</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">July 2015 - August 2020</span>[cite: 1]
+                        <span class="location">Bengaluru, India</span>[cite: 1]
+                    </div>
                 </div>
-                <div class="exp-time">Aug 2017 – Aug 2020</div>
-            </div>
-            <span class="interactive-badge" id="badge-srf">▶ Click to view details</span>
-            <div class="collapsible-content" id="srf">
-                <ul class="exp-bullets">
-                    <li>Synthesized high-quality, large-area vanadium dioxide (VO₂) thin films using PLD and DC Reactive Sputtering, achieving precise phase purity and an optimized surface roughness of 3.68 nm.</li>
-                    <li>Implemented Design of Experiments (DoE) utilizing the Taguchi model to systematically optimize deposition parameters, significantly improving thin-film uniformity and deposition reproducibility.</li>
-                    <li>Co-designed, built, and calibrated a custom ultrasonic nebulized spray pyrolysis (UNSPACM) experimental apparatus, demonstrating hands-on mechanical troubleshooting and systems engineering capabilities.</li>
-                    <li>Partnered with international institutions (including Institut Pprime, France, and Cinvestav-Merida, Mexico) to characterize and map the thermophysical and optoelectronic properties of thin films and bulk materials for aerospace applications.</li>
-                    <li>Diagnosed and resolved complex hardware faults in thin-film deposition chambers and vacuum subsystems, minimizing instrumentation downtime.</li>
+                <ul class="accomplishment-list">
+                    <li><strong>Thesis Focus:</strong> <em>Vanadium Dioxide: Bulk and Thin Films for Device Applications</em>[cite: 1]. Evaluated and optimized structural parameters for smart-window and metamaterial applications across diverse conditions[cite: 1].</li>
+                    <li>Synthesized high-quality, large-area vanadium dioxide (VO<sub>2</sub>) thin films using Pulsed Laser Deposition (PLD) and DC Reactive Sputtering, achieving precise phase purity and an optimized surface roughness of 3.68 nm[cite: 1].</li>
+                    <li>Implemented Design of Experiments (DoE) utilizing the Taguchi model to systematically determine optimal deposition parameters, significantly improving thin-film uniformity[cite: 1].</li>
+                    <li>Engineered highly efficient reduced graphene oxide/Vanadium Pentoxide (rGO/V<sub>2</sub>O<sub>5</sub>) nanocomposites using microwave-assisted synthesis, demonstrating a 98% photocatalytic degradation efficiency of organic pollutants under solar irradiation[cite: 1].</li>
+                    <li>Introduced Scandium (Sc) doping to tune the optical properties of VO<sub>2</sub> thin films, successfully expanding the bandgap from 1.76 eV to 2.02 eV to drastically improve visible spectrum transparency for thermochromic smart window applications[cite: 1].</li>
+                    <li>Partnered with international institutions (including Institut Pprime, France, and Cinvestav-Merida, Mexico) to characterize and map the thermophysical and optoelectronic properties of VO<sub>2</sub> pellets[cite: 1].</li>
+                    <li>Co-designed and calibrated a custom, home-built ultrasonic nebulized spray pyrolysis experimental apparatus for low-cost, scalable thin-film deposition[cite: 1].</li>
+                    <li>Served as dedicated Lab Safety Coordinator, managing chemical handling, waste disposal protocols, and organizing the Materials Research Center Outreach Program[cite: 1].</li>
                 </ul>
-                <div class="tags">
-                    <span class="tag">DC Reactive Sputtering</span>
-                    <span class="tag">Taguchi DoE</span>
-                    <span class="tag">Custom Instrumentation</span>
-                </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- JRF -->
-        <div class="exp-card" onclick="toggleDetails('jrf')">
-            <div class="exp-header">
-                <div>
-                    <h3>Junior Research Fellow & Lab Safety Coordinator</h3>
-                    <div class="exp-company">Indian Institute of Science (IISc) <span class="exp-location">— Bengaluru, India</span></div>
+            <!-- Job 5 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="role-title">Junior Research Fellow</h3>
+                        <span class="company-name">Institute of Nanoscience and Technology (INST)</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">August 2014 - June 2015</span>[cite: 1]
+                        <span class="location">Mohali, India</span>[cite: 1]
+                    </div>
                 </div>
-                <div class="exp-time">July 2015 – July 2017</div>
-            </div>
-            <span class="interactive-badge" id="badge-jrf">▶ Click to view details</span>
-            <div class="collapsible-content" id="jrf">
-                <ul class="exp-bullets">
-                    <li>Introduced Scandium (Sc) doping to tune the optical properties of VO₂ thin films, successfully expanding the bandgap from 1.76 eV to 2.02 eV to improve visible spectrum transparency for thermochromic applications.</li>
-                    <li>Fabricated large-area, uniform Sc-doped VO₂ thin films using a home-built spray pyrolysis setup, optimizing parameters for scalable optoelectronic applications.</li>
-                    <li>Served as the dedicated Lab Safety Coordinator, enforcing strict compliance with chemical handling, waste disposal, and high-temperature equipment safety protocols.</li>
+                <ul class="accomplishment-list">
+                    <li>Developed a cost-effective, reverse micellar and ionic salt flux synthesis route to engineer morphologically controlled zinc oxide (ZnO) nanostructures optimized for energy generation and storage applications[cite: 1].</li>
+                    <li>Functioned as an independent expert user and characterization lead for key analytical systems, including X-ray Diffraction (XRD), Scanning Electron Microscopy (SEM), and Transmission Electron Microscopy (TEM)[cite: 1].</li>
+                    <li>Co-organized the international NanoBio 2014 conference, managing logistics and programming for 80+ participants and 16+ international speakers[cite: 1].</li>
+                    <li>Served as the Lab Safety and Chemical Inventory Coordinator, managing compliance, auditing hazardous materials, and maintaining chemical logs across shared facilities[cite: 1].</li>
                 </ul>
-                <div class="tags">
-                    <span class="tag">Bandgap Engineering</span>
-                    <span class="tag">Lab Safety Leadership</span>
-                </div>
-            </div>
-        </div>
+            </article>
+        </section>
 
-        <!-- INST -->
-        <div class="exp-card" onclick="toggleDetails('inst')">
-            <div class="exp-header">
-                <div>
-                    <h3>Junior Research Fellow</h3>
-                    <div class="exp-company">Institute of Nanoscience and Technology (INST) <span class="exp-location">— Mohali, India</span></div>
-                </div>
-                <div class="exp-time">Aug 2014 – June 2015</div>
-            </div>
-            <span class="interactive-badge" id="badge-inst">▶ Click to view details</span>
-            <div class="collapsible-content" id="inst">
-                <ul class="exp-bullets">
-                    <li>Developed a cost-effective, reverse micellar and ionic salt flux synthesis route to engineer morphologically controlled zinc oxide (ZnO) nanostructures optimized for energy generation and storage applications.</li>
-                    <li>Functioned as an independent expert user and characterization lead for key analytical systems, including X-ray Diffraction (XRD), Scanning Electron Microscopy (SEM), and Transmission Electron Microscopy (TEM).</li>
-                    <li>Co-organized the international NanoBio 2014 conference, managing logistics and programming for 80+ participants and 16+ international speakers.</li>
-                    <li>Served as the Lab Safety and Chemical Inventory Coordinator, managing compliance, auditing hazardous materials, and maintaining chemical logs across shared INST and IISER Mohali facilities.</li>
-                </ul>
-                <div class="tags">
-                    <span class="tag">ZnO Nanostructures</span>
-                    <span class="tag">Characterization Lead</span>
-                </div>
-            </div>
-        </div>
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="resume-section">
+            <h2 class="section-title">Education</h2>
 
+            <!-- Degree 1 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="degree-title">Ph.D. in Materials Science</h3>
+                        <span class="institution-name">Indian Institute of Science (IISc)</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">July 2015 - December 2020</span>[cite: 1]
+                        <span class="location">Bengaluru, India</span>[cite: 1]
+                    </div>
+                </div>
+                <div class="degree-details">
+                    <p><strong>Thesis:</strong> Vanadium dioxide: Bulk and Thin Films for Device Applications (Materials Research Center, Chemical Sciences Division)[cite: 1].</p>
+                </div>
+            </article>
+
+            <!-- Degree 2 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="degree-title">Master of Science (M.Sc.) in Chemistry</h3>
+                        <span class="institution-name">Hansraj College, University of Delhi</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">July 2012 - June 2014</span>[cite: 1]
+                        <span class="location">Delhi, India</span>[cite: 1]
+                    </div>
+                </div>
+                <div class="degree-details">
+                    <p>Inorganic Chemistry Specialization[cite: 1].</p>
+                </div>
+            </article>
+
+            <!-- Degree 3 -->
+            <article class="timeline-item">
+                <div class="timeline-header">
+                    <div class="title-block">
+                        <h3 class="degree-title">Bachelor of Science (B.Sc. Hons.) in Chemistry</h3>
+                        <span class="institution-name">Hansraj College, University of Delhi</span>[cite: 1]
+                    </div>
+                    <div class="meta-block">
+                        <span class="date">July 2009 - June 2012</span>[cite: 1]
+                        <span class="location">Delhi, India</span>[cite: 1]
+                    </div>
+                </div>
+            </article>
+        </section>
+        
     </main>
 
     <footer>
-        <p>© 2026 Dr. Devanshi Bhardwaj | Process Engineering Portfolio</p>
+        <p>&copy; 2026 Dr. Devanshi Bhardwaj. All rights reserved.</p>
     </footer>
 
-    <script>
-        function toggleDetails(id) {
-            const element = document.getElementById(id);
-            const badge = document.getElementById('badge-' + id);
-            if (element.style.display === 'block') {
-                element.style.display = 'none';
-                badge.innerText = '▶ Click to view details';
-            } else {
-                element.style.display = 'block';
-                badge.innerText = '▼ Click to hide details';
-            }
-        }
-
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', targetTheme);
-            localStorage.setItem('theme', targetTheme);
-        }
-        
-        // Synchronize and retain user theme choice
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    </script>
 </body>
 </html>
