@@ -38,6 +38,7 @@
             align-items: center;
             padding: 20px 0;
             border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
         }
         .nav-links a {
             text-decoration: none;
@@ -57,37 +58,6 @@
             color: var(--text-color);
             font-size: 0.85rem;
         }
-        header {
-            padding: 40px 0;
-            border-bottom: 2px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        .header-text { flex: 1; }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent-color);
-        }
-        h1 { color: var(--heading-color); margin: 0 0 5px 0; font-size: 2.5rem; }
-        .subtitle { color: var(--text-color); font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
-        .contact-info { color: var(--text-color); opacity: 0.8; font-size: 0.95rem; margin-bottom: 15px; }
-        .links-container { display: flex; gap: 12px; flex-wrap: wrap; }
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            background: #2B6CB0;
-            color: white;
-            text-decoration: none;
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .btn-secondary { background: #4A5568; }
         
         h2 { color: var(--accent-color); margin-top: 30px; font-size: 1.4rem; border-left: 4px solid var(--accent-color); padding-left: 10px; }
         p { margin-bottom: 15px; text-align: justify; }
@@ -212,20 +182,6 @@
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
     </nav>
-
-    <header>
-        <img src="profile.png" alt="Dr. Devanshi Bhardwaj" class="profile-img" onerror="this.style.display='none'">
-        <div class="header-text">
-            <h1>Dr. Devanshi Bhardwaj</h1>
-            <div class="subtitle">Process Engineer | Materials Scientist | Technical Consultant</div>
-            <div class="contact-info">Union City, CA | devanshibhardwaj28@gmail.com</div>
-            <div class="links-container">
-                <a href="https://linkedin.com/in/dr-devanshi-bhardwaj" target="_blank" class="btn-link">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=iCPxGPAAAAAJ" target="_blank" class="btn-link btn-secondary">Google Scholar</a>
-                <a href="https://www.researchgate.net/profile/Devanshi-Bhardwaj?ev=hdr_xprf" target="_blank" class="btn-link btn-secondary">ResearchGate</a>
-            </div>
-        </div>
-    </header>
 
     <div class="content-layout">
         
@@ -398,7 +354,7 @@
 
         </main>
 
-        <!-- SIDEBAR PANEL (Matching index.html structural alignment) -->
+        <!-- SIDEBAR PANEL -->
         <aside class="sidebar">
             <div class="sidebar-panel">
                 <div class="sidebar-title">Expert Reviewer</div>
@@ -429,7 +385,6 @@
             localStorage.setItem('theme', targetTheme);
         }
         
-        // Synchronized dark-mode configurations state
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
