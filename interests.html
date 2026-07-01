@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Interests | Dr. Devanshi Bhardwaj</title>
+    <style>
+        /* Base Styling & Theme (Identical to your portfolio layout) */
+        :root {
+            --bg-color: #F7FAFC;
+            --card-bg: #ffffff;
+            --text-color: #2D3748;
+            --heading-color: #1A202C;
+            --accent-color: #2B6CB0;
+            --border-color: #E2E8F0;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1A202C;
+            --card-bg: #2D3748;
+            --text-color: #E2E8F0;
+            --heading-color: #F7FAFC;
+            --accent-color: #63B3ED;
+            --border-color: #4A5568;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 950px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background 0.3s, color 0.3s;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-right: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .nav-links a.active { color: var(--accent-color); }
+        
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 0.85rem;
+        }
+        
+        h2 { color: var(--accent-color); margin-top: 30px; font-size: 1.4rem; border-left: 4px solid var(--accent-color); padding-left: 10px; }
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* TWO-COLUMN GRID LAYOUT */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                order: -1;
+                margin-top: 20px;
+            }
+        }
+
+        /* INTEREST CARDS STYLING */
+        .interest-card {
+            background: var(--card-bg); 
+            padding: 24px; 
+            border-radius: 8px; 
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .interest-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: var(--heading-color);
+        }
+        .interest-list {
+            padding-left: 18px;
+            margin: 10px 0 0 0;
+        }
+        .interest-list li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        /* RIGHT SIDEBAR PANEL STYLING */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .sidebar-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .sidebar-title {
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
+            color: var(--heading-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        .tag-item {
+            display: inline-block;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 4px 2px;
+        }
+        footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="interests.html" class="active">Research Interests</a>
+            <a href="experience.html">Experience & Education</a>
+            <a href="publications.html">Publications & Research</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    </nav>
+
+    <div class="content-layout">
+        
+        <!-- MAIN TRACK: RESEARCH INTERESTS -->
+        <main>
+            <section>
+                <h2>Core Research Fields</h2>
+
+                <!-- Field 1 -->
+                <div class="interest-card">
+                    <h3 class="interest-title">Advanced Energy & Nuclear Materials</h3>
+                    <p>
+                        Investigating material behaviors, structural transitions, and phase stabilities under the extreme environmental configurations typical of nuclear and fusion energy applications[cite: 1]. This includes exploring specialized component parameters under high thermal thresholds and post-irradiation constraints[cite: 1].
+                    </p>
+                    <ul class="interest-list">
+                        <li>Beryllium-based two-phase moderators and novel intermetallics[cite: 1]</li>
+                        <li>Phase-pure metal carbides and high-density hydrides[cite: 1]</li>
+                        <li>Radiation-resistant matrices for advanced reactor shielding architectures[cite: 1]</li>
+                    </ul>
+                </div>
+
+                <!-- Field 2 -->
+                <div class="interest-card">
+                    <h3 class="interest-title">Thin-Film Engineering & Vacuum Technology</h3>
+                    <p>
+                        Optimizing vapor-phase deposition pathways to fabricate highly uniform, microstructurally controlled thin films for optoelectronic, smart-window, and hardware sensor operations[cite: 1]. Focused on driving processing reproducibility through structural phase tuning[cite: 1].
+                    </p>
+                    <ul class="interest-list">
+                        <li>Pulsed Laser Deposition (PLD) and Magnetron Sputtering dynamics[cite: 1]</li>
+                        <li>Phase-purity optimization of transition-metal oxides like Vanadium Dioxide (VO<sub>2</sub>)[cite: 1]</li>
+                        <li>Bandgap modifications via strategic structural element doping[cite: 1]</li>
+                    </ul>
+                </div>
+
+                <!-- Field 3 -->
+                <div class="interest-card">
+                    <h3 class="interest-title">Advanced Crystallography & Microstructural Analysis</h3>
+                    <p>
+                        Utilizing comprehensive high-resolution X-ray and electron-based characterization workflows to isolate crystallographic textures, identify complex phases, and assess microstructural changes in synthesized frameworks[cite: 1].
+                    </p>
+                    <ul class="interest-list">
+                        <li>Powder and Thin-Film X-ray Diffraction (XRD) with structural refinement analysis[cite: 1]</li>
+                        <li>Microstructural evaluation mapping via high-resolution SEM and TEM imaging[cite: 1]</li>
+                        <li>Correlating bulk thermophysical properties with localized structural data metrics[cite: 1]</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- SIDEBAR PANEL -->
+        <aside class="sidebar">
+            <div class="sidebar-panel">
+                <div class="sidebar-title">Methodologies</div>
+                <div class="tag-item">Design of Experiments (DoE)</div>[cite: 1]
+                <div class="tag-item">Taguchi Model</div>[cite: 1]
+                <div class="tag-item">Rietveld Refinement</div>[cite: 1]
+                <div class="tag-item">UHV Environments</div>[cite: 1]
+                <div class="tag-item">Lab Safety Management</div>[cite: 1]
+                <div class="tag-item">System Calibration</div>[cite: 1]
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Dr. Devanshi Bhardwaj | Built and Hosted via GitHub Pages</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        }
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html>
