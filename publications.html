@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Dr. Devanshi Bhardwaj</title>
+    <title>Publications & Conferences | Dr. Devanshi Bhardwaj</title>
     <style>
         :root {
             --bg-color: #F7FAFC;
@@ -58,34 +58,6 @@
         
         h2 { color: var(--accent-color); margin-top: 40px; font-size: 1.5rem; border-left: 4px solid var(--accent-color); padding-left: 10px; padding-top: 5px; }
         
-        /* METRICS DASHBOARD STYLING */
-        .metrics-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin: 25px 0;
-        }
-        .metric-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-        }
-        .metric-value {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: var(--accent-color);
-            margin: 5px 0;
-        }
-        .metric-label {
-            font-size: 0.9rem;
-            color: var(--text-color);
-            opacity: 0.8;
-            font-weight: 600;
-        }
-
         .search-box {
             width: 100%;
             padding: 12px;
@@ -141,6 +113,41 @@
             color: #ffffff;
         }
 
+        .conf-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .conf-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .conf-presentation {
+            padding-left: 12px;
+            border-left: 2px solid var(--border-color);
+            margin-bottom: 10px;
+        }
+        .conf-presentation:last-child {
+            margin-bottom: 0;
+        }
+        .conf-talk {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin: 0 0 2px 0;
+        }
+        .conf-meta {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
         footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
     </style>
 </head>
@@ -157,42 +164,34 @@
     </nav>
 
     <main>
-        <h2>Research Impact Metrics</h2>
-        
-        <!-- Clean numerical cards that render immediately -->
-        <div class="metrics-container">
-            <div class="metric-card">
-                <div class="metric-label">Total Citations</div>
-                <div class="metric-value">235+</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-label">h-index</div>
-                <div class="metric-value">8</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-label">i10-index</div>
-                <div class="metric-value">7</div>
-            </div>
-        </div>
-
         <h2>Peer-Reviewed Publications</h2>
         
-        <input type="text" id="pubSearch" class="search-box" onkeyup="filterPublications()" placeholder="🔍 Search publications by keyword (e.g., Vanadium, Hydride, PLD, Sputtering)...">
+        <input type="text" id="pubSearch" class="search-box" onkeyup="filterContent()" placeholder="🔍 Search publications or conferences by keyword (e.g., Vanadium, Hydride, PLD, Beryllium)...">
 
         <div id="pubList">
             <!-- Paper 1 -->
             <div class="pub-item">
-                <div class="pub-title">Measurement of the hysteretic thermal properties of W-doped and undoped nanocrystalline powders of VO₂</div>
-                <div class="pub-authors">CL Gomez-Heredia, JA Ramirez-Rincon, <strong>Devanshi Bhardwaj</strong>, P Rajasekar, J Ordonez-Miranda, O Arés, AM Umarji, J Drevillon, K Joulain, Y Ezzahri, JJ Alvarado-Gil</div>
-                <div class="pub-journal">Scientific Reports, 9(1), 14687 (2019)</div>
+                <div class="pub-title">On the Use of Beryllium Carbide (Be<sub>2</sub>C) Compacts for Advanced Reactor Moderator Applications</div>
+                <div class="pub-authors">Lance Snead, <strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">Journal of Nuclear Materials</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:9yKSV6_Fv44C" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                    <a href="YOUR_LINK_HERE" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
 
             <!-- Paper 2 -->
             <div class="pub-item">
-                <div class="pub-title">Synthesis of phase pure vanadium dioxide (VO₂) thin film by reactive pulsed laser deposition</div>
+                <div class="pub-title">Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, B Cheng, D Sprouster, W Cunningham, N Rani, JR Trelewicz</div>
+                <div class="pub-journal">Frontiers in Nuclear Engineering, 3, 1352667 (2024)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:qjYADgC8gCJC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 3 -->
+            <div class="pub-item">
+                <div class="pub-title">Synthesis of Phase-Pure Vanadium Dioxide (VO<sub>2</sub>) Thin Films via Reactive Pulsed Laser Deposition</div>
                 <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, A Goswami, AM Umarji</div>
                 <div class="pub-journal">Journal of Applied Physics, 124(13), 135301 (2018)</div>
                 <div class="pub-links">
@@ -200,19 +199,9 @@
                 </div>
             </div>
 
-            <!-- Paper 3 -->
-            <div class="pub-item">
-                <div class="pub-title">Highly photoresponsive VO₂ (M1) thin films synthesized by DC reactive sputtering</div>
-                <div class="pub-authors">IJ Tadeo, <strong>Devanshi Bhardwaj</strong>, D Sheela, SB Krupanidhi, AM Umarji</div>
-                <div class="pub-journal">Journal of Materials Science: Materials in Electronics, 31, 5472–5480 (2020)</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:u573YF86HJgC" target="_blank" class="pub-btn">View Paper Record ↗</a>
-                </div>
-            </div>
-
             <!-- Paper 4 -->
             <div class="pub-item">
-                <div class="pub-title">Microwave-assisted synthesis of reduced graphene oxide/V₂O₅ nano-composite as an efficient photocatalyst for dye degradation</div>
+                <div class="pub-title">Microwave-assisted synthesis of reduced graphene oxide/V<sub>2</sub>O<sub>5</sub> nano-composite as an efficient photocatalyst for dye degradation</div>
                 <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, S Sangwan, SA Shivashankar, AM Umarji</div>
                 <div class="pub-journal">Bulletin of Materials Science, 45(3), 135 (2022)</div>
                 <div class="pub-links">
@@ -222,21 +211,21 @@
 
             <!-- Paper 5 -->
             <div class="pub-item">
-                <div class="pub-title">Fabrication of smooth thin film of vanadium oxides (VOₓ) using pulsed laser deposition</div>
-                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, DK Singh, SB Krupanidhi, AM Umarji</div>
-                <div class="pub-journal">Applied Physics A, 126(3), 157 (2020)</div>
+                <div class="pub-title">Scandium: An efficient dopant to modulate the optical spectrum of vanadium dioxide (VO<sub>2</sub>)</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, AM Umarji</div>
+                <div class="pub-journal">SN Applied Sciences, 2(9), 1553 (2020)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:d1gkVwhDPL0C" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:2osOgNQ5qMEC" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
 
             <!-- Paper 6 -->
             <div class="pub-item">
-                <div class="pub-title">Low Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride</div>
-                <div class="pub-authors">DJ Sprouster, M Ouyang, N Cetiner, P Negi, A Sharma, <strong>Devanshi Bhardwaj</strong></div>
-                <div class="pub-journal">Journal of Nuclear Materials, 609, 155770 (2025)</div>
+                <div class="pub-title">Fabrication of smooth thin film of vanadium oxides (VO<sub>x</sub>) using pulsed laser deposition</div>
+                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, DK Singh, SB Krupanidhi, AM Umarji</div>
+                <div class="pub-journal">Applied Physics A, 126(3), 157 (2020)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:Y0pCki6q_DkC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:d1gkVwhDPL0C" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
 
@@ -252,40 +241,258 @@
 
             <!-- Paper 8 -->
             <div class="pub-item">
-                <div class="pub-title">Fabrication of Neutron Absorbing Metal Hydride Entrained Ceramic Matrix Shield Composites</div>
-                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, B Cheng, D Sprouster, W Cunningham, N Rani, JR Trelewicz</div>
-                <div class="pub-journal">Frontiers in Nuclear Engineering, 3, 1352667 (2024)</div>
+                <div class="pub-title">Measurement of the hysteretic thermal properties of W-doped and undoped nanocrystalline powders of VO<sub>2</sub></div>
+                <div class="pub-authors">CL Gomez-Heredia, JA Ramirez-Rincon, <strong>Devanshi Bhardwaj</strong>, P Rajasekar, J Ordonez-Miranda, O Arés, AM Umarji, J Drevillon, K Joulain, Y Ezzahri, JJ Alvarado-Gil</div>
+                <div class="pub-journal">Scientific Reports, 9(1), 14687 (2019)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:qjYADgC8gCJC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:9yKSV6_Fv44C" target="_blank" class="pub-btn">View Paper Record ↗</a>
                 </div>
             </div>
 
             <!-- Paper 9 -->
             <div class="pub-item">
-                <div class="pub-title">Scandium: An efficient dopant to modulate the optical spectrum of vanadium dioxide (VO₂)</div>
-                <div class="pub-authors"><strong>Devanshi Bhardwaj</strong>, AM Umarji</div>
-                <div class="pub-journal">SN Applied Sciences, 2(9), 1553 (2020)</div>
+                <div class="pub-title">Highly photoresponsive VO<sub>2</sub> (M1) thin films synthesized by DC reactive sputtering</div>
+                <div class="pub-authors">IJ Tadeo, <strong>Devanshi Bhardwaj</strong>, D Sheela, SB Krupanidhi, AM Umarji</div>
+                <div class="pub-journal">Journal of Materials Science: Materials in Electronics, 31, 5472–5480 (2020)</div>
                 <div class="pub-links">
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:2osOgNQ5qMEC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:u573YF86HJgC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 10 -->
+            <div class="pub-item">
+                <div class="pub-title">Sintered Nanostructured Alloys for Advanced Fusion Energy Applications</div>
+                <div class="pub-authors">DJ Sprouster, <strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">Journal of Nuclear Materials</div>
+                <div class="pub-links">
+                    <a href="YOUR_LINK_HERE" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 11 -->
+            <div class="pub-item">
+                <div class="pub-title">Low-Temperature Neutron Irradiation Stability of Zirconium Hydride and Yttrium Hydride</div>
+                <div class="pub-authors">DJ Sprouster, M Ouyang, N Cetiner, P Negi, A Sharma, <strong>Devanshi Bhardwaj</strong></div>
+                <div class="pub-journal">Journal of Nuclear Materials, 609, 155770 (2025)</div>
+                <div class="pub-links">
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iCPxGPAAAAAJ&citation_for_view=iCPxGPAAAAAJ:Y0pCki6q_DkC" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 12 -->
+            <div class="pub-item">
+                <div class="pub-title">The Impact of Graphene-Based Materials on Anion-Exchange Membrane Fuel Cells</div>
+                <div class="pub-authors">A Raut, <strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">Carbon Trends</div>
+                <div class="pub-links">
+                    <a href="YOUR_LINK_HERE" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+
+            <!-- Paper 13 -->
+            <div class="pub-item">
+                <div class="pub-title">Designing a Micro-Cellulose Membrane for Hydrogen Fuel Cells</div>
+                <div class="pub-authors">A Raut, <strong>Devanshi Bhardwaj</strong>, et al.</div>
+                <div class="pub-journal">RSC Sustainability</div>
+                <div class="pub-links">
+                    <a href="YOUR_LINK_HERE" target="_blank" class="pub-btn">View Paper Record ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Conference Presentations & Symposia</h2>
+        
+        <div id="confList">
+            <!-- Conference 1 -->
+            <div class="conf-item">
+                <div class="conf-name">49th International Conference and Expo on Advanced Ceramics and Composites (ICACC-2026, Florida, USA)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Processing and properties of Be<sub>12</sub>Ti for advanced fusion blanket multipliers</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Toward zero-rupture TRISO fuel encapsulation in MgO via pressureless sintering</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 2 -->
+            <div class="conf-item">
+                <div class="conf-name">48th International Conference and Expo on Advanced Ceramics and Composites (ICACC-2024, Florida, USA)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Low temperature and pressure synthesis of novel inert matrix or microencapsulated fuel forms</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Thermophysical and microstructural property changes in neutron-irradiated metal hydrides</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">On the Hydrogen Stability in Ceramic Matrix Entrained Hydride Composite Shield</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 3 -->
+            <div class="conf-item">
+                <div class="conf-name">ARPA-E Energy Innovation Summit 2024</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Technology showcase of the MATRICY project funded under ONWARDS by ARPA-E</p>
+                    <span class="conf-meta">Program Technical Showcase</span>
+                </div>
+            </div>
+
+            <!-- Conference 4 -->
+            <div class="conf-item">
+                <div class="conf-name">TMS Annual Meeting and Exhibition 2024 (Florida, USA)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Compatibility Issues for FLiBe Fusion Blankets</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Reduced Processing Temperature of Advanced Ceramic Composites</p>
+                    <span class="conf-meta">Co-authored Oral Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 5 -->
+            <div class="conf-item">
+                <div class="conf-name">21st International Conference on Fusion Reactor Materials (ICFRM-21, Granada, Spain)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">On the Difficulty in Achieving Phase Purity in Be<sub>12</sub>Ti and Its Impact on Blanket Multiplication</p>
+                    <span class="conf-meta">Oral Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">High-temperature, Entrained-Hydride Ceramic Shield Composite for Compact Fusion Devices</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Development and Radiation Effects of Ultra High-Temperature Ceramics for Plasma Facing Components</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 6 -->
+            <div class="conf-item">
+                <div class="conf-name">47th International Conference and Expo on Advanced Ceramics and Composites (ICACC-2023, Florida, USA)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Processing and properties of titanium beryllides (Be<sub>12</sub>Ti) as a replacement material in future fusion applications</p>
+                    <span class="conf-meta">Oral Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 7 -->
+            <div class="conf-item">
+                <div class="conf-name">International Conference on Laser Ablation (COLA-2019, Maui, Hawaii, USA)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Fabrication of smooth thin films of VO<sub>2</sub> grown by Pulsed Laser Deposition</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Effect of partial pressure on phase stabilization of vanadium oxide using reactive pulsed laser deposition</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 8 -->
+            <div class="conf-item">
+                <div class="conf-name">International Conference on Materials for Advanced Technologies (ICMAT 2019, Marina Bay Sands, Singapore)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Synthesis of phase pure VO<sub>2</sub> (M1) thin films using pulsed laser deposition</p>
+                    <span class="conf-meta">Oral Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 9 -->
+            <div class="conf-item">
+                <div class="conf-name">Materials Research Society (MRS) Spring Meeting 2019 (Phoenix, USA)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Fabrication of Vanadium Dioxide Thin Films for Device Applications</p>
+                    <span class="conf-meta">Co-authored Poster Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 10 -->
+            <div class="conf-item">
+                <div class="conf-name">International Conference on Frontiers in Chemical Sciences (FICS-2018, IIT Guwahati, India)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Modulation of optical spectrum of VO<sub>2</sub> for smart window applications</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 11 -->
+            <div class="conf-item">
+                <div class="conf-name">Smart and Emerging Materials (Dubai, UAE)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Fabrication of Vanadium dioxide Thin Films for Device Applications</p>
+                    <span class="conf-meta">Poster Presentation — <strong>Best Poster Award</strong></span>
+                </div>
+            </div>
+
+            <!-- Conference 12 -->
+            <div class="conf-item">
+                <div class="conf-name">One-day workshop on Ceramics and Advanced Materials for Space Applications (CAMSA-2018, ISRO-Satellite Centre, Bangalore, India)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Fabrication of Vanadium dioxide Thin Films for Device Applications</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 13 -->
+            <div class="conf-item">
+                <div class="conf-name">International Conference on Pulsed Laser Deposition (iCOLD 2017, IIT Madras, India)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Synthesis of phase pure VO<sub>2</sub> (M1) thin films using pulsed laser deposition</p>
+                    <span class="conf-meta">Oral Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 14 -->
+            <div class="conf-item">
+                <div class="conf-name">Sastra University (Thanjavur, India)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Nanostructured oxides for photocatalysis</p>
+                    <span class="conf-meta">Poster Presentation</span>
+                </div>
+            </div>
+
+            <!-- Conference 15 -->
+            <div class="conf-item">
+                <div class="conf-name">Punjab University (Chandigarh, India)</div>
+                <div class="conf-presentation">
+                    <p class="conf-talk">Nanostructured oxides for photocatalysis</p>
+                    <span class="conf-meta">Poster Presentation</span>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>© 2026 Dr. Devanshi Bhardwaj | Analytics Integrated Portfolio</p>
+        <p>© 2026 Dr. Devanshi Bhardwaj | Built and Hosted via GitHub Pages</p>
     </footer>
 
     <script>
-        function filterPublications() {
+        function filterContent() {
             const input = document.getElementById('pubSearch').value.toLowerCase();
-            const items = document.getElementsByClassName('pub-item');
+            const pubItems = document.getElementsByClassName('pub-item');
+            const confItems = document.getElementsByClassName('conf-item');
             
-            for (let i = 0; i < items.length; i++) {
-                if (items[i].innerText.toLowerCase().includes(input)) {
-                    items[i].style.display = "";
+            // Filter publications
+            for (let i = 0; i < pubItems.length; i++) {
+                if (pubItems[i].innerText.toLowerCase().includes(input)) {
+                    pubItems[i].style.display = "";
                 } else {
-                    items[i].style.display = "none";
+                    pubItems[i].style.display = "none";
+                }
+            }
+
+            // Filter conferences
+            for (let j = 0; j < confItems.length; j++) {
+                if (confItems[j].innerText.toLowerCase().includes(input)) {
+                    confItems[j].style.display = "";
+                } else {
+                    confItems[j].style.display = "none";
                 }
             }
         }
@@ -297,7 +504,6 @@
             localStorage.setItem('theme', targetTheme);
         }
 
-        // Apply dark/light layout settings dynamically
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
