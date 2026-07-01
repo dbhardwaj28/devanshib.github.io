@@ -155,6 +155,7 @@
             opacity: 0.8;
             font-weight: 600;
             margin-top: 2px;
+            text-align: center;
         }
 
         .skills-grid { 
@@ -204,19 +205,20 @@
 
     <div class="content-layout">
         
-        <!-- ABOUT ME HERO SECTION -->
-        <section class="profile-card">
-            <div class="profile-about">
-                <h2>About Me</h2>
-                <p>
-                    I am a results-driven Materials Scientist and Process Engineer with a Ph.D. in Materials Science and over 5 years of post-graduate expertise specializing in advanced crystallographic and structural characterization of complex systems, nuclear/fusion energy materials, and thin-film engineering.
-                </p>
-                <p>
-                    My professional track record includes translating fundamental experimental data into scalable, reproducible workflows for industrial partners and national laboratory networks[cite: 1]. Additionally, I bring deep leadership experience in laboratory safety coordination, ensuring zero-incident operations while managing complex chemical and hazardous environments[cite: 1].
-                </p>
+        <!-- MAIN MAIN COLUMN -->
+        <main>
+            <section class="profile-card">
+                <div class="profile-about">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a results-driven Materials Scientist and Process Engineer with a Ph.D. in Materials Science and over 5 years of post-graduate expertise specializing in advanced crystallographic and structural characterization of complex systems, nuclear/fusion energy materials, and thin-film engineering.
+                    </p>
+                    <p>
+                        My professional track record includes translating fundamental experimental data into scalable, reproducible workflows for industrial partners and national laboratory networks. Additionally, I bring deep leadership experience in laboratory safety coordination, ensuring zero-incident operations while managing complex chemical and hazardous environments.
+                    </p>
                 </div>
-            </div>
-        </section>
+            </section>
+
             <section>
                 <h2>Skills & Technical Expertise</h2>
                 <div class="skills-grid">
@@ -263,6 +265,7 @@
             </section>
         </main>
 
+        <!-- RIGHT SIDEBAR PANEL -->
         <aside class="sidebar">
             <div class="sidebar-panel">
                 <div class="sidebar-title">Research Impact</div>
@@ -284,7 +287,17 @@
                 
                 <div class="stat-item">
                     <div class="stat-value">13</div>
-                    <div class="stat-label">Total Publications</div>
+                    <div class="stat-label">Peer-Reviewed Articles</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value">21</div>
+                    <div class="stat-label">Invited Expert Reviews</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value">26</div>
+                    <div class="stat-label">Conference Presentations</div>
                 </div>
                 
             </div>
@@ -304,9 +317,8 @@
             localStorage.setItem('theme', targetTheme);
         }
         
-        // Restore dark-mode configurations cleanly
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 </body>
-</html> 
+</html>
