@@ -12,6 +12,7 @@
             --heading-color: #1A202C;
             --accent-color: #2B6CB0;
             --border-color: #E2E8F0;
+            --logo-filter: none;
         }
         [data-theme="dark"] {
             --bg-color: #1A202C;
@@ -20,6 +21,7 @@
             --heading-color: #F7FAFC;
             --accent-color: #63B3ED;
             --border-color: #4A5568;
+            --logo-filter: brightness(0) invert(1) opacity(0.85);
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -98,12 +100,46 @@
             margin-top: 20px;
         }
         
+        /* AFFILIATIONS LOGO GRID */
+        .affiliations-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .affiliation-logo {
+            max-height: 55px;
+            max-width: 120px;
+            object-fit: contain;
+            filter: var(--logo-filter);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            opacity: 0.9;
+        }
+        .affiliation-logo:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        
         @media (max-width: 768px) {
             .content-layout {
                 grid-template-columns: 1fr;
             }
             .sidebar {
                 order: -1;
+            }
+            .affiliations-container {
+                gap: 15px;
+            }
+            .affiliation-logo {
+                max-height: 45px;
+                max-width: 90px;
             }
         }
         
@@ -212,11 +248,23 @@
                 <div class="profile-about">
                     <h2>About Me</h2>
                     <p>
-                        I am a results-driven Materials Scientist and Process Engineer with a Ph.D. in Materials Science and over 5 years of post-graduate expertise specializing in advanced crystallographic and structural characterization of complex systems, nuclear/fusion energy materials, and thin-film engineering.
+                        I am a results-driven Materials Scientist and Process Engineer with a Ph.D. in Materials Science and over 5 years of post-graduate expertise specializing in advanced crystallographic and structural characterization of complex systems, nuclear/fusion energy materials, and thin-film engineering[cite: 1].
                     </p>
                     <p>
-                        My professional track record includes translating fundamental experimental data into scalable, reproducible workflows for industrial partners and national laboratory networks. Additionally, I bring deep leadership experience in laboratory safety coordination, ensuring zero-incident operations while managing complex chemical and hazardous environments.
+                        My professional track record includes translating fundamental experimental data into scalable, reproducible workflows for industrial partners and national laboratory networks[cite: 1]. Additionally, I bring deep leadership experience in laboratory safety coordination, ensuring zero-incident operations while managing complex chemical and hazardous environments[cite: 1].
                     </p>
+                </div>
+            </section>
+
+            <!-- INSTITUTIONAL AFFILIATIONS LOGO SECTION -->
+            <section>
+                <h2>Institutional Affiliations</h2>
+                <div class="affiliations-container">
+                    <img src="logos/iisc.png" alt="Indian Institute of Science (IISc)" class="affiliation-logo" title="Indian Institute of Science (IISc)" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/7/79/Indian_Institute_of_Science_logo.svg'">
+                    <img src="logos/stonybrook.png" alt="Stony Brook University" class="affiliation-logo" title="Stony Brook University" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/1/11/Stony_Brook_University_logo.svg'">
+                    <img src="logos/inst.png" alt="Institute of Nano Science and Technology (INST)" class="affiliation-logo" title="Institute of Nano Science and Technology (INST)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d4/INST_Mohali_logo.png'">
+                    <img src="logos/iiser.png" alt="IISER Mohali" class="affiliation-logo" title="IISER Mohali" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/e/eb/IISER_Mohali_logo.svg'">
+                    <img src="logos/csir.png" alt="Council of Scientific and Industrial Research (CSIR)" class="affiliation-logo" title="Council of Scientific and Industrial Research (CSIR)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/82/CSIR_India_Logo.svg'">
                 </div>
             </section>
 
@@ -227,45 +275,45 @@
                     <div class="skills-category">
                         <h3>Thin-Film Synthesis & Vacuum Systems</h3>
                         <ul class="skills-list">
-                            <li>Pulsed Laser Deposition (PLD), Physical Vapor Deposition (PVD)</li>
-                            <li>Magnetron Sputtering (DC/RF Sputtering) & Recipe Standardization</li>
-                            <li>Chemical Vapor Deposition (CVD) & Multi-Chamber Vacuum Platforms</li>
-                            <li>Spark Plasma Sintering (SPS), Cold & Hot Solid-State Pressing Processes</li>
-                            <li>High-Vacuum Contamination Control, Gas-Flow & Pressure Calibration</li>
-                            <li>Substrate Temperature Control & Hardware Troubleshooting</li>
+                            <li>Pulsed Laser Deposition (PLD), Physical Vapor Deposition (PVD)[cite: 2]</li>
+                            <li>Magnetron Sputtering (DC/RF Sputtering) & Recipe Standardization[cite: 2]</li>
+                            <li>Chemical Vapor Deposition (CVD) & Multi-Chamber Vacuum Platforms[cite: 2]</li>
+                            <li>Spark Plasma Sintering (SPS), Cold & Hot Solid-State Pressing Processes[cite: 1, 2]</li>
+                            <li>High-Vacuum Contamination Control, Gas-Flow & Pressure Calibration[cite: 2]</li>
+                            <li>Substrate Temperature Control & Hardware Troubleshooting[cite: 2]</li>
                         </ul>
                     </div>
 
                     <div class="skills-category">
                         <h3>Material Characterization & Metrology</h3>
                         <ul class="skills-list">
-                            <li>X-ray Diffraction (XRD) & Structural Phase Identification</li>
-                            <li>Rietveld Refinement (GSAS / GSAS-II, FullProf)</li>
-                            <li>Scanning (SEM-EDS) & Transmission (TEM) Electron Microscopy</li>
-                            <li>X-ray Photoelectron (XPS) & Raman Spectroscopy Mapping</li>
-                            <li>Surface Morphology Mapping, Film Thickness & Uniformity Optimization</li>
+                            <li>X-ray Diffraction (XRD) & Structural Phase Identification[cite: 1, 2]</li>
+                            <li>Rietveld Refinement (GSAS / GSAS-II, FullProf)[cite: 1, 2]</li>
+                            <li>Scanning (SEM-EDS) & Transmission (TEM) Electron Microscopy[cite: 2]</li>
+                            <li>X-ray Photoelectron (XPS) & Raman Spectroscopy Mapping[cite: 2]</li>
+                            <li>Surface Morphology Mapping, Film Thickness & Uniformity Optimization[cite: 2]</li>
                         </ul>
                     </div>
 
                     <div class="skills-category">
                         <h3>Materials Quality & Nano-Synthesis</h3>
                         <ul class="skills-list">
-                            <li>Nanostructure Morphology Regulation (ZnO)</li>
-                            <li>Solution Combustion Synthesis & Hydrothermal Synthesis Methods</li>
-                            <li>Reverse Micellar & Molten Salt Flux Chemical Routes</li>
-                            <li>Incoming Quality Control (IQC) & Batch-to-Batch Variation Tracking</li>
-                            <li>Rigorous Chemical Hygiene, Precursor Storage & Hazardous Waste Management</li>
+                            <li>Nanostructure Morphology Regulation (ZnO)[cite: 2]</li>
+                            <li>Solution Combustion Synthesis & Hydrothermal Synthesis Methods[cite: 1]</li>
+                            <li>Reverse Micellar & Molten Salt Flux Chemical Routes[cite: 1, 2]</li>
+                            <li>Incoming Quality Control (IQC) & Batch-to-Batch Variation Tracking[cite: 2]</li>
+                            <li>Rigorous Chemical Hygiene, Precursor Storage & Hazardous Waste Management[cite: 2]</li>
                         </ul>
                     </div>
 
                     <div class="skills-category">
                         <h3>Project Operations & Quality Control</h3>
                         <ul class="skills-list">
-                            <li>Design of Experiments (DOE - Taguchi Models)</li>
-                            <li>Statistical Process Control (SPC) & Advanced Process Control (APC)</li>
-                            <li>Cross-Functional Root-Cause Failure Investigations (RCA/RCCA)</li>
-                            <li>Standard Operating Procedure (SOP) Authoring & Technical Documentation</li>
-                            <li>Process Scaling & New Product Introduction (NPI)</li>
+                            <li>Design of Experiments (DOE - Taguchi Models)[cite: 1, 2]</li>
+                            <li>Statistical Process Control (SPC) & Advanced Process Control (APC)[cite: 2]</li>
+                            <li>Cross-Functional Root-Cause Failure Investigations (RCA/RCCA)[cite: 2]</li>
+                            <li>Standard Operating Procedure (SOP) Authoring & Technical Documentation[cite: 2]</li>
+                            <li>Process Scaling & New Product Introduction (NPI)[cite: 2]</li>
                         </ul>
                     </div>
 
@@ -279,7 +327,7 @@
                 <div class="sidebar-title">Research Impact</div>
                 
                 <div class="stat-item">
-                    <div class="stat-value">255</div>
+                    <div class="stat-value">247</div>
                     <div class="stat-label">Total Citations</div>
                 </div>
                 
@@ -295,17 +343,17 @@
                 
                 <div class="stat-item">
                     <div class="stat-value">13</div>
-                    <div class="stat-label">Peer-Reviewed Articles</div>
+                    <div class="stat-label">Peer-Reviewed Articles[cite: 1]</div>
                 </div>
 
                 <div class="stat-item">
-                    <div class="stat-value">24</div>
-                    <div class="stat-label">Invited Expert Reviews</div>
+                    <div class="stat-value">21</div>
+                    <div class="stat-label">Invited Expert Reviews[cite: 2]</div>
                 </div>
 
                 <div class="stat-item">
-                    <div class="stat-value">22</div>
-                    <div class="stat-label">Conference Presentations</div>
+                    <div class="stat-value">26</div>
+                    <div class="stat-label">Conference Presentations[cite: 2]</div>
                 </div>
                 
             </div>
