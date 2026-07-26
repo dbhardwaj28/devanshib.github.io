@@ -100,7 +100,7 @@
             margin-top: 25px;
         }
         
-        /* 2-COLUMN GRID FOR SKILLS & ACHIEVEMENTS */
+        /* 2-COLUMN GRID FOR SKILLS */
         .grid-2col { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -125,6 +125,11 @@
         .custom-list { list-style: none; padding: 0; margin: 0; }
         .custom-list li { margin-bottom: 10px; padding-left: 15px; position: relative; font-size: 0.92rem; }
         .custom-list li::before { content: "•"; color: var(--accent-color); font-weight: bold; position: absolute; left: 0; }
+
+        /* SINGLE CARD SECTION STYLING */
+        .single-card-section {
+            margin-top: 20px;
+        }
 
         /* RIGHT SIDEBAR PANEL STYLING */
         .sidebar {
@@ -343,31 +348,21 @@
                 </div>
             </section>
 
-            <!-- HONORS, FELLOWSHIPS & MEMBERSHIPS SECTION -->
+            <!-- CONSOLIDATED HONORS, AWARDS & MEMBERSHIPS SECTION -->
             <section>
                 <h2>Honors, Awards & Memberships</h2>
-                <div class="grid-2col">
-                    
+                <div class="single-card-section">
                     <div class="card-box">
-                        <h3>National Fellowships & Grants</h3>
                         <ul class="custom-list">
-                            <li><strong>CSIR Senior Research Fellowship (SRF):</strong> Awarded July 2017.</li>
-                            <li><strong>CSIR Junior Research Fellowship (JRF):</strong> Awarded June 2015.</li>
-                            <li><strong>CSIR-UGC NET/JRF Examination (Chemical Sciences):</strong> Qualified in June 2014 with an All-India Rank (AIR) of 45.</li>
-                            <li><strong>Graduate Aptitude Test in Engineering (GATE - Chemistry):</strong> Qualified in 2014 with a score of 514 and an All-India Rank (AIR) of 319.</li>
-                            <li><strong>International Travel Grant:</strong> Awarded by Council of Scientific and Industrial Research (CSIR) in 2019.</li>
-                        </ul>
-                    </div>
-
-                    <div class="card-box">
-                        <h3>Professional Memberships</h3>
-                        <ul class="custom-list">
+                            <li><strong>Awarded CSIR Senior Research Fellowship (SRF):</strong> Council of Scientific and Industrial Research, India (July 2017)</li>
+                            <li><strong>Awarded CSIR Junior Research Fellowship (JRF):</strong> Council of Scientific and Industrial Research, India (June 2015)</li>
+                            <li><strong>CSIR-UGC NET/JRF Examination (Chemical Sciences):</strong> Qualified in June 2014 with an All-India Rank (AIR) of 45</li>
+                            <li><strong>Graduate Aptitude Test in Engineering (GATE - Chemistry):</strong> Qualified in 2014 with a score of 514 and an All-India Rank (AIR) of 319</li>
+                            <li><strong>International Travel Grant:</strong> Awarded by Council of Scientific and Industrial Research (CSIR), 2019</li>
                             <li><strong>Member:</strong> American Ceramic Society</li>
                             <li><strong>Member:</strong> Materials Research Society (MRS), Singapore (2019)</li>
-                            <li><strong>Invited Expert Peer Reviewer:</strong> Recognized reviewer evaluating manuscripts across leading crystallography, nuclear, and applied physics journals (24 verified reviews).</li>
                         </ul>
                     </div>
-
                 </div>
             </section>
         </main>
