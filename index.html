@@ -12,6 +12,7 @@
             --heading-color: #1A202C;
             --accent-color: #2B6CB0;
             --border-color: #E2E8F0;
+            --logo-filter: none;
         }
         [data-theme="dark"] {
             --bg-color: #1A202C;
@@ -20,6 +21,7 @@
             --heading-color: #F7FAFC;
             --accent-color: #63B3ED;
             --border-color: #4A5568;
+            --logo-filter: brightness(0) invert(1) opacity(0.9);
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -98,37 +100,31 @@
             margin-top: 20px;
         }
 
-        /* STYLED AFFILIATION BADGES */
-        .affiliations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .affil-card {
+        /* AFFILIATIONS LOGO ROW */
+        .affiliations-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 12px 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
-        .affil-abbr {
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            letter-spacing: 0.5px;
-        }
-        .affil-name {
-            font-size: 0.75rem;
-            color: var(--text-color);
+        .affiliation-logo {
+            max-height: 50px;
+            max-width: 110px;
+            object-fit: contain;
+            filter: var(--logo-filter);
+            transition: transform 0.2s ease, opacity 0.2s ease;
             opacity: 0.85;
-            margin-top: 2px;
-            line-height: 1.2;
+        }
+        .affiliation-logo:hover {
+            transform: scale(1.05);
+            opacity: 1;
         }
         
         @media (max-width: 768px) {
@@ -137,6 +133,13 @@
             }
             .sidebar {
                 order: -1;
+            }
+            .affiliations-container {
+                gap: 12px;
+            }
+            .affiliation-logo {
+                max-height: 40px;
+                max-width: 80px;
             }
         }
         
@@ -253,30 +256,15 @@
                 </div>
             </section>
 
-            <!-- INSTITUTIONAL AFFILIATIONS SECTION -->
+            <!-- INSTITUTIONAL AFFILIATIONS LOGOS -->
             <section>
                 <h2>Institutional Affiliations</h2>
-                <div class="affiliations-grid">
-                    <div class="affil-card">
-                        <div class="affil-abbr">IISc</div>
-                        <div class="affil-name">Indian Institute of Science</div>
-                    </div>
-                    <div class="affil-card">
-                        <div class="affil-abbr">SBU</div>
-                        <div class="affil-name">Stony Brook University</div>
-                    </div>
-                    <div class="affil-card">
-                        <div class="affil-abbr">INST</div>
-                        <div class="affil-name">Inst. of Nano Science & Tech</div>
-                    </div>
-                    <div class="affil-card">
-                        <div class="affil-abbr">IISER</div>
-                        <div class="affil-name">IISER Mohali</div>
-                    </div>
-                    <div class="affil-card">
-                        <div class="affil-abbr">CSIR</div>
-                        <div class="affil-name">CSIR India</div>
-                    </div>
+                <div class="affiliations-container">
+                    <img src="images/iisc.png" alt="IISc Bengaluru" class="affiliation-logo" title="Indian Institute of Science">
+                    <img src="images/stonybrook.png" alt="Stony Brook University" class="affiliation-logo" title="Stony Brook University">
+                    <img src="images/inst.png" alt="INST Mohali" class="affiliation-logo" title="Institute of Nano Science and Technology">
+                    <img src="images/iiser.png" alt="IISER Mohali" class="affiliation-logo" title="IISER Mohali">
+                    <img src="images/csir.png" alt="CSIR India" class="affiliation-logo" title="Council of Scientific and Industrial Research">
                 </div>
             </section>
 
