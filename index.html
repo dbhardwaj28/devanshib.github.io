@@ -205,7 +205,12 @@
             filter: var(--logo-filter);
             transition: transform 0.2s ease;
         }
-        /* SPECIFIC ENLARGEMENT FOR IISER AND CSIR LOGOS */
+        /* SPECIFIC ENLARGEMENT FOR IISC, IISER, AND CSIR LOGOS */
+        .sidebar-logo.logo-iisc {
+            max-height: 120px;
+            max-width: 235px;
+            transform: scale(1.08);
+        }
         .sidebar-logo.logo-iiser {
             max-height: 125px;
             max-width: 240px;
@@ -218,6 +223,9 @@
         }
         .sidebar-logo:hover {
             transform: scale(1.05);
+        }
+        .sidebar-logo.logo-iisc:hover {
+            transform: scale(1.13);
         }
         .sidebar-logo.logo-iiser:hover {
             transform: scale(1.15);
@@ -384,7 +392,7 @@
                 <div class="sidebar-list">
                     
                     <div class="sidebar-item">
-                        <img src="images/iisc.png" alt="Indian Institute of Science" class="sidebar-logo" title="Indian Institute of Science">
+                        <img src="images/iisc.png" alt="Indian Institute of Science" class="sidebar-logo logo-iisc" title="Indian Institute of Science">
                     </div>
 
                     <div class="sidebar-item">
