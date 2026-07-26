@@ -99,33 +99,6 @@
             gap: 30px;
             margin-top: 20px;
         }
-
-        /* AFFILIATIONS LOGO ROW */
-        .affiliations-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 15px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-        }
-        .affiliation-logo {
-            max-height: 50px;
-            max-width: 110px;
-            object-fit: contain;
-            filter: var(--logo-filter);
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            opacity: 0.85;
-        }
-        .affiliation-logo:hover {
-            transform: scale(1.05);
-            opacity: 1;
-        }
         
         @media (max-width: 768px) {
             .content-layout {
@@ -134,20 +107,13 @@
             .sidebar {
                 order: -1;
             }
-            .affiliations-container {
-                gap: 12px;
-            }
-            .affiliation-logo {
-                max-height: 40px;
-                max-width: 80px;
-            }
         }
         
         /* RIGHT SIDEBAR PANEL STYLING */
         .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
             margin-top: 40px;
         }
         .sidebar-panel {
@@ -192,6 +158,42 @@
             font-weight: 600;
             margin-top: 2px;
             text-align: center;
+        }
+
+        /* SIDEBAR LIST STYLING */
+        .sidebar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .sidebar-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .sidebar-logo {
+            max-height: 35px;
+            max-width: 45px;
+            object-fit: contain;
+            filter: var(--logo-filter);
+        }
+        .sidebar-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-color);
+            line-height: 1.2;
+        }
+        .sidebar-subtext {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 2px;
         }
 
         .skills-grid { 
@@ -256,18 +258,6 @@
                 </div>
             </section>
 
-            <!-- INSTITUTIONAL AFFILIATIONS LOGOS -->
-            <section>
-                <h2>Institutional Affiliations</h2>
-                <div class="affiliations-container">
-                    <img src="images/iisc.png" alt="IISc Bengaluru" class="affiliation-logo" title="Indian Institute of Science">
-                    <img src="images/stonybrook.png" alt="Stony Brook University" class="affiliation-logo" title="Stony Brook University">
-                    <img src="images/inst.png" alt="INST Mohali" class="affiliation-logo" title="Institute of Nano Science and Technology">
-                    <img src="images/iiser.png" alt="IISER Mohali" class="affiliation-logo" title="IISER Mohali">
-                    <img src="images/csir.png" alt="CSIR India" class="affiliation-logo" title="Council of Scientific and Industrial Research">
-                </div>
-            </section>
-
             <section>
                 <h2>Skills & Technical Expertise</h2>
                 <div class="skills-grid">
@@ -323,6 +313,8 @@
 
         <!-- RIGHT SIDEBAR PANEL -->
         <aside class="sidebar">
+            
+            <!-- RESEARCH IMPACT PANEL -->
             <div class="sidebar-panel">
                 <div class="sidebar-title">Research Impact</div>
                 
@@ -355,8 +347,52 @@
                     <div class="stat-value">26</div>
                     <div class="stat-label">Conference Presentations</div>
                 </div>
-                
             </div>
+
+            <!-- AFFILIATIONS SIDEBAR PANEL -->
+            <div class="sidebar-panel">
+                <div class="sidebar-title">Affiliations</div>
+                <div class="sidebar-list">
+                    
+                    <div class="sidebar-item">
+                        <img src="images/iisc.png" alt="IISc" class="sidebar-logo" onerror="this.style.display='none'">
+                        <div class="sidebar-text">Indian Institute of Science</div>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <img src="images/stonybrook.png" alt="SBU" class="sidebar-logo" onerror="this.style.display='none'">
+                        <div class="sidebar-text">Stony Brook University</div>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <img src="images/inst.png" alt="INST" class="sidebar-logo" onerror="this.style.display='none'">
+                        <div class="sidebar-text">Inst. of Nano Science & Tech</div>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <img src="images/iiser.png" alt="IISER" class="sidebar-logo" onerror="this.style.display='none'">
+                        <div class="sidebar-text">IISER Mohali</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FELLOWSHIPS SIDEBAR PANEL -->
+            <div class="sidebar-panel">
+                <div class="sidebar-title">Fellowships & Grants</div>
+                <div class="sidebar-list">
+                    
+                    <div class="sidebar-item">
+                        <img src="images/csir.png" alt="CSIR" class="sidebar-logo" onerror="this.style.display='none'">
+                        <div>
+                            <div class="sidebar-text">CSIR Doctoral Fellowship</div>
+                            <div class="sidebar-subtext">Senior & Junior Research Fellow (SRF/JRF)</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
         </aside>
         
     </div>
