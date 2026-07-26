@@ -160,17 +160,19 @@
             text-align: center;
         }
 
-        /* SIDEBAR LIST STYLING */
+        /* SIDEBAR LARGER LOGO LIST STYLING */
         .sidebar-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            align-items: center;
+            gap: 16px;
         }
         .sidebar-item {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 12px;
-            padding-bottom: 8px;
+            width: 100%;
+            padding-bottom: 12px;
             border-bottom: 1px dashed var(--border-color);
         }
         .sidebar-item:last-child {
@@ -178,22 +180,14 @@
             padding-bottom: 0;
         }
         .sidebar-logo {
-            max-height: 35px;
-            max-width: 45px;
+            max-height: 75px;
+            max-width: 180px;
             object-fit: contain;
             filter: var(--logo-filter);
+            transition: transform 0.2s ease;
         }
-        .sidebar-text {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-color);
-            line-height: 1.2;
-        }
-        .sidebar-subtext {
-            font-size: 0.75rem;
-            font-weight: 400;
-            opacity: 0.8;
-            margin-top: 2px;
+        .sidebar-logo:hover {
+            transform: scale(1.05);
         }
 
         .skills-grid { 
@@ -355,23 +349,19 @@
                 <div class="sidebar-list">
                     
                     <div class="sidebar-item">
-                        <img src="images/iisc.png" alt="IISc" class="sidebar-logo" onerror="this.style.display='none'">
-                        <div class="sidebar-text">Indian Institute of Science</div>
+                        <img src="images/iisc.png" alt="Indian Institute of Science" class="sidebar-logo" title="Indian Institute of Science" onerror="this.style.display='none'">
                     </div>
 
                     <div class="sidebar-item">
-                        <img src="images/stonybrook.png" alt="SBU" class="sidebar-logo" onerror="this.style.display='none'">
-                        <div class="sidebar-text">Stony Brook University</div>
+                        <img src="images/stonybrook.png" alt="Stony Brook University" class="sidebar-logo" title="Stony Brook University" onerror="this.style.display='none'">
                     </div>
 
                     <div class="sidebar-item">
-                        <img src="images/inst.png" alt="INST" class="sidebar-logo" onerror="this.style.display='none'">
-                        <div class="sidebar-text">Inst. of Nano Science & Tech</div>
+                        <img src="images/inst.png" alt="Institute of Nano Science & Technology" class="sidebar-logo" title="Institute of Nano Science & Technology" onerror="this.style.display='none'">
                     </div>
 
                     <div class="sidebar-item">
-                        <img src="images/iiser.png" alt="IISER" class="sidebar-logo" onerror="this.style.display='none'">
-                        <div class="sidebar-text">IISER Mohali</div>
+                        <img src="images/iiser.png" alt="IISER Mohali" class="sidebar-logo" title="IISER Mohali" onerror="this.style.display='none'">
                     </div>
 
                 </div>
@@ -379,15 +369,11 @@
 
             <!-- FELLOWSHIPS SIDEBAR PANEL -->
             <div class="sidebar-panel">
-                <div class="sidebar-title">Fellowships & Grants</div>
+                <div class="sidebar-title">Fellowships</div>
                 <div class="sidebar-list">
                     
                     <div class="sidebar-item">
-                        <img src="images/csir.png" alt="CSIR" class="sidebar-logo" onerror="this.style.display='none'">
-                        <div>
-                            <div class="sidebar-text">CSIR Doctoral Fellowship</div>
-                            <div class="sidebar-subtext">Senior & Junior Research Fellow (SRF/JRF)</div>
-                        </div>
+                        <img src="images/csir.png" alt="Council of Scientific and Industrial Research" class="sidebar-logo" title="CSIR Doctoral Fellowship (JRF/SRF)" onerror="this.style.display='none'">
                     </div>
 
                 </div>
