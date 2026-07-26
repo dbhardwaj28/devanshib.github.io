@@ -183,7 +183,7 @@
         .sidebar-logo {
             width: 100%;
             height: auto;
-            max-height: 110px;
+            max-height: 120px;
             max-width: 220px;
             object-fit: contain;
             filter: var(--logo-filter);
@@ -356,7 +356,7 @@
                     </div>
 
                     <div class="sidebar-item">
-                        <img src="images/stonybrook.png" alt="Stony Brook University" class="sidebar-logo" title="Stony Brook University" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/stonybrook/brand/master/logos/sbu-logo.png';">
+                        <img src="images/stonybrook.png" alt="Stony Brook University" class="sidebar-logo" title="Stony Brook University" id="sbuLogo" onerror="handleSbuError(this)">
                     </div>
 
                     <div class="sidebar-item">
@@ -391,6 +391,17 @@
     </footer>
 
     <script>
+        function handleSbuError(img) {
+            // Tries alternate case/extension names if stonybrook.png fails
+            if (!img.dataset.triedUpper) {
+                img.dataset.triedUpper = "true";
+                img.src = "images/Stonybrook.png";
+            } else if (!img.dataset.triedJpg) {
+                img.dataset.triedJpg = "true";
+                img.src = "images/stonybrook.jpg";
+            }
+        }
+
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
