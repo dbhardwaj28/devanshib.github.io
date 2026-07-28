@@ -96,30 +96,17 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .gallery-tag {
-            display: inline-block;
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            color: var(--accent-color);
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            align-self: flex-start;
-        }
         .gallery-caption {
-            font-size: 0.95rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 700;
             color: var(--heading-color);
-            margin: 0 0 4px 0;
+            margin: 0 0 6px 0;
         }
         .gallery-subcaption {
-            font-size: 0.85rem;
-            opacity: 0.8;
+            font-size: 0.88rem;
+            opacity: 0.85;
             margin: 0;
+            line-height: 1.5;
         }
 
         footer { margin-top: 60px; padding: 20px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7; }
@@ -141,69 +128,153 @@
 
     <main>
         <section>
-            <h2>Photo Gallery & Highlights</h2>
+            <h2>Photo Gallery</h2>
             <p class="intro-text">
-                A glimpse into my research journey—featuring academic conference talks, convocation milestones, lab team events, and astrophotography highlights.
+                Moments from academic conferences, research milestones, laboratory teamwork, and outreach events throughout my scientific journey.
             </p>
 
             <div class="gallery-grid">
 
-                <!-- ITEM 1: CONFERENCES -->
+                <!-- 1. MILESTONES -->
                 <div class="gallery-card">
-                    <img src="images/gallery/conference1.jpg" alt="Oral Presentation at Conference" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=Conference+Presentation'">
+                    <img src="images/convo.JPG" alt="Ph.D. Convocation Ceremony, 2021" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=convo.JPG'">
                     <div class="gallery-content">
                         <div>
-                            <span class="gallery-tag">Conferences & Talks</span>
-                            <h3 class="gallery-caption">Oral Presentation at ICACC</h3>
-                            <p class="gallery-subcaption">Delivering research findings on advanced ceramics and beryllides.</p>
+                            <h3 class="gallery-caption">Ph.D. Convocation Ceremony (2021)</h3>
+                            <p class="gallery-subcaption">Receiving the doctoral degree at the Indian Institute of Science (IISc), Bengaluru.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- ITEM 2: CONVOCATION -->
                 <div class="gallery-card">
-                    <img src="images/gallery/convocation.jpg" alt="Ph.D. Convocation at IISc" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=Ph.D.+Convocation+IISc'">
+                    <img src="images/def.JPG" alt="Ph.D. Thesis Defense, Dec 2020" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=def.JPG'">
                     <div class="gallery-content">
                         <div>
-                            <span class="gallery-tag">Milestones</span>
-                            <h3 class="gallery-caption">Ph.D. Convocation Ceremony</h3>
-                            <p class="gallery-subcaption">Materials Research Center (MRC), Indian Institute of Science (IISc).</p>
+                            <h3 class="gallery-caption">Ph.D. Thesis Defense (Dec 2020)</h3>
+                            <p class="gallery-subcaption">Successfully defending doctoral research on vanadium dioxide bulk and thin-film systems at IISc.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- ITEM 3: GROUP DINNERS & TEAM -->
+                <!-- 2. CONFERENCES & SUMMITS (Chronological: Recent to Past) -->
                 <div class="gallery-card">
-                    <img src="images/gallery/group_dinner.jpg" alt="Research Group Dinner" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=Research+Group+Dinner'">
+                    <img src="images/ARPA.JPG" alt="ARPA-E Energy Innovation Summit 2024" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=ARPA.JPG'">
                     <div class="gallery-content">
                         <div>
-                            <span class="gallery-tag">Group Events</span>
-                            <h3 class="gallery-caption">Research Group Dinner</h3>
-                            <p class="gallery-subcaption">Celebrating successful manuscript submissions and semester milestones with colleagues.</p>
+                            <h3 class="gallery-caption">ARPA-E Energy Innovation Summit (2024)</h3>
+                            <p class="gallery-subcaption">Technology showcase of the ONWARDS-funded MATRICY project for advanced nuclear materials.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- ITEM 4: POSTER PRESENTATION -->
                 <div class="gallery-card">
-                    <img src="images/gallery/poster.jpg" alt="Best Poster Award Presentation" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=Poster+Presentation'">
+                    <img src="images/ICFRM.JPG" alt="Oral Presentation at ICFRM-21, 2023" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=ICFRM.JPG'">
                     <div class="gallery-content">
                         <div>
-                            <span class="gallery-tag">Awards & Symposia</span>
-                            <h3 class="gallery-caption">Best Poster Award Presentation</h3>
-                            <p class="gallery-subcaption">Showcasing thin-film VO₂ device fabrication research at international symposia.</p>
+                            <h3 class="gallery-caption">ICFRM-21 (Granada, Spain, 2023)</h3>
+                            <p class="gallery-subcaption">Oral presentation on Titanium Beryllides (Be₁₂Ti) phase purity for fusion reactor blankets.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- ITEM 5: ASTROPHOTOGRAPHY -->
                 <div class="gallery-card">
-                    <img src="images/gallery/milkyway.jpg" alt="Milky Way Astrophotography" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=Milky+Way+Astrophotography'">
+                    <img src="images/COLA.JPG" alt="Poster Presentation at COLA-2019" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=COLA.JPG'">
                     <div class="gallery-content">
                         <div>
-                            <span class="gallery-tag">Astrophotography</span>
-                            <h3 class="gallery-caption">Milky Way Night Sky Capture</h3>
-                            <p class="gallery-subcaption">Long-exposure astrophotography and raw imagery processing.</p>
+                            <h3 class="gallery-caption">COLA-2019 (Hawaii, USA)</h3>
+                            <p class="gallery-subcaption">Poster presentation on PLD phase stabilization of vanadium oxides at the International Conference on Laser Ablation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/ICACC.JPG" alt="Oral Presentation at ICMAT-2019" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=ICACC.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">ICMAT-2019 (Singapore)</h3>
+                            <p class="gallery-subcaption">Delivering an oral presentation on phase-pure VO₂ thin film synthesis at Marina Bay Sands.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/IITM.JPG" alt="Oral Presentation at iCOLD-2017" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=IITM.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">iCOLD-2017 (IIT Madras, India)</h3>
+                            <p class="gallery-subcaption">Oral talk on reactive pulsed laser deposition techniques for functional oxide films.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/IUMRS.JPG" alt="Presentation at IUMRS-ICYRAM 2016" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=IUMRS.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">IUMRS ICYRAM-2016</h3>
+                            <p class="gallery-subcaption">Presenting research findings at the International Union of Materials Research Societies Conference.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. TEAM & LAB LIFE (Chronological: Recent to Past) -->
+                <div class="gallery-card">
+                    <img src="images/Dinner2023.JPG" alt="Stony Brook Team Dinner, 2023" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=Dinner2023.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">Stony Brook Research Group Dinner (2023)</h3>
+                            <p class="gallery-subcaption">Gathering with team members and collaborators from Stony Brook University.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/SBU 2022.JPG" alt="Stony Brook Team Dinner, 2022" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=SBU+2022.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">SBU Team Dinner (2022)</h3>
+                            <p class="gallery-subcaption">Celebrating research milestones with the Stony Brook materials team.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/AMU.JPG" alt="AMU Doctoral Research Group" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=AMU.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">AMU Lab Group (IISc Bengaluru)</h3>
+                            <p class="gallery-subcaption">With doctoral colleagues and Prof. Arun M. Umarji at the Materials Research Center.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/SBK.JPG" alt="Group Lunch with Prof. S.B. Krupanidhi's Team" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=SBK.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">Collaborative Group Lunch</h3>
+                            <p class="gallery-subcaption">With Prof. S.B. Krupanidhi's research group at the Indian Institute of Science.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/IISER.JPG" alt="INST Team Dinner, 2014" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=IISER.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">INST Research Team Dinner (2014)</h3>
+                            <p class="gallery-subcaption">Gathering with researchers at the Institute of Nano Science and Technology (INST), Mohali.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. SCIENCE OUTREACH -->
+                <div class="gallery-card">
+                    <img src="images/open1.JPG" alt="IISc Open Day Demonstration, 2016" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x250?text=open1.JPG'">
+                    <div class="gallery-content">
+                        <div>
+                            <h3 class="gallery-caption">IISc Open Day Outreach (2016)</h3>
+                            <p class="gallery-subcaption">Demonstrating the thermoelectric effect to visiting school students at IISc Bengaluru.</p>
                         </div>
                     </div>
                 </div>
